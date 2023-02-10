@@ -16,8 +16,7 @@ code {
 }
 
 #root {
-  padding-top: 1vw;
-  padding-bottom: 1vw;
+
   background: rgb(255, 255, 255);
   background: radial-gradient(circle, rgb(36, 18, 151) 55%, rgb(255, 42, 42) 100%);
 }
@@ -28,11 +27,13 @@ footer-bg {
 
   /* Previous */
 
-
+.outer-box{
+    background-color: rgba(223, 222, 222, 0.373);
+}
 .container {
   max-width: 1200px !important;
   position: relative;
-  background-color: rgba(223, 222, 222, 0.373);
+
   font-family: 'Raleway', sans-serif;
   padding-top: 1rem;
   border-radius: 10px;
@@ -213,6 +214,12 @@ a:hover{
   background-color: rgb(255, 255, 255);
   object-fit: scale-down;
 }
+@media only screen and (max-width: 767px) {
+  .ci{
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
 
 .card {
   background-color: rgba(0, 0, 0, 0.095) !important;

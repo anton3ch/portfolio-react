@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet';
 
 function App() {
   return (
+    <div className="outer-box">
     <div className="container pb-1">
       <Helmet>
         <title>Anton Ch</title>
@@ -19,6 +20,7 @@ function App() {
       <ProjectList />
       <AboutMe />
       <Footer />
+    </div>
     </div>
   );
 }
