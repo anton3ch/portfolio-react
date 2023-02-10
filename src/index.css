@@ -1,13 +1,336 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import 'animate.css';
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  background: rgb(16,175,161);
+  background: radial-gradient(circle, rgb(36, 18, 151) 55%, rgb(255, 42, 42) 100%);
+}
+
+footer-bg {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+  /* Previous */
+
+
+.container {
+  max-width: 1200px !important;
+  background-color: rgba(223, 222, 222, 0.69);
+  font-family: 'Raleway', sans-serif;
+  padding-top: 1rem;
+  border-radius: 10px;
+}
+
+/* Anchors */
+
+a {
+  background: -webkit-linear-gradient(rgb(55, 0, 255), rgb(255, 0, 221));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 1000;
+}
+
+.card-footer a {
+  background: -webkit-linear-gradient(rgb(253, 98, 98), rgb(159, 139, 237));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 1000;
+}
+
+#myName {
+  background: -webkit-linear-gradient(rgb(150, 101, 241), rgb(228, 146, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 1000;
+}
+
+#myName:hover {
+  background: -webkit-linear-gradient(rgb(255, 29, 29), rgb(208, 69, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 1000;
+}
+
+a:hover{
+  text-decoration: none;
+  color: rgb(255, 0, 119);
+  -webkit-text-fill-color: red;
+}
+
+/* Navigation */
+#icons img {
+  width: 2em;
+  padding: 3px;
+  border-radius: 0;
+  margin: 5px;
+  
+}
+
+#icons li {
+  list-style: none;
+}
+
+#icons {
+  position: fixed;
+  top: 1vw;
+  right: 1vw;
+  
+}
+
+@media only screen and (max-width: 600px) {
+
+  #icons img {
+    display: none;
+  }
+}
+
+/* Intro section */
+
+.jumbotron {
+  background-color: rgb(255, 255, 255);
+  display: flex !important;
+  padding-right: 0;
+}
+
+#intro h1 {
+  font-size: 4rem;
+  
+}
+
+#intro h2 {
+  font-size: 4.9rem;
+  
+}
+
+#intro2 {
+  font-size: 3.5rem !important;
+}
+
+.mePhotoContainer {
+  display: flex;
+  position: sticky;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+#mePhoto {
+  width: 19rem;
+  display: block;
+}
+
+@media only screen and (max-width: 990px) {
+  #mePhoto {
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #mePhoto {
+    display: none;
+  }
+}
+
+/* My projects section */
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .card-img {
+    /* height: 22vw;
+    max-height: 300px; */
+    border: 2px solid purple;
+    padding: 2px;
+  }
+
+  .card-s {
+    display: flex;
+    min-height: 55vw;
+    position: relative;
+  }
+
+  .card-footer {
+    position: absolute;
+    bottom: 0px;
+    width: 88%;
+  }
+
+  .project {
+    max-width: 360px;
+  }
+}
+.card-text {
+  padding-top: 10px;
+}
+
+ol {
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .card-s {
+    min-height: 10vw;
+    height: 750px !important;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .card-s {
+    min-height: 10vw;
+    height: 750px !important;
+  }
+  
+}
+@media only screen and (max-width: 900px) {
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+/* About me */
+
+
+.float {
+  display: block;
+  float: right;
+  width: 40px;
+}
+
+/* Flickering animation */
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(192, 191, 191);
+  -webkit-animation-name: flash-txt;
+  animation-name: flash-txt;
+  -webkit-animation-duration: 5.5s;
+  animation-duration: 5.5s;
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+  animation-direction: normal;
+  border-radius: 10px;
+}
+
+.projectList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project {
+  margin: 10px;
+}
+
+
+
+  /* animation */
+  @keyframes flash-txt {
+    0% {
+      text-shadow: 2px 2px 18px rgb(4, 252, 83);
+      color: white;
+  }
+    18% {
+      text-shadow: 2px 2px 18px rgb(4, 107, 252);
+      color: white;
+    }
+    20% {
+      text-shadow: none;
+      color: white;
+    }
+    22% {
+      text-shadow: 2px 2px 18px rgb(252, 4, 231);
+      color: white;
+    }
+    24% {
+      text-shadow: none;
+      color: white;
+    }
+    25% {
+      text-shadow: 2px 2px 18px rgb(4, 252, 83);
+      color: white;
+    }
+    53% {
+      text-shadow: 2px 2px 18px rgb(4, 107, 252);
+      color: white;
+    }
+    55% {
+      text-shadow: none;
+      color: white;
+    }
+    57% {
+      text-shadow: 2px 2px 8px rgb(252, 4, 231);
+      color: white;
+    }
+    100% {
+      text-shadow: 2px 2px 8px rgb(4, 107, 252);
+      color: white;
+    }
+  } 
+  @-webkit-keyframes flash-txt {
+    0% {
+      text-shadow: 2px 2px 18px rgb(4, 252, 83);
+      color: white;
+  }
+    18% {
+      text-shadow: 2px 2px 18px rgb(4, 107, 252);
+      color: white;
+    }
+    20% {
+      text-shadow: none;
+      color: white;
+    }
+    22% {
+      text-shadow: 2px 2px 18px rgb(252, 4, 231);
+      color: white;
+    }
+    24% {
+      text-shadow: none;
+      color: white;
+    }
+    25% {
+      text-shadow: 2px 2px 18px rgb(4, 252, 83);
+      color: white;
+    }
+    53% {
+      text-shadow: 2px 2px 18px rgb(4, 107, 252);
+      color: white;
+    }
+    55% {
+      text-shadow: none;
+      color: white;
+    }
+    57% {
+      text-shadow: 2px 2px 8px rgb(252, 4, 231);
+      color: white;
+    }
+    100% {
+      text-shadow: 2px 2px 8px rgb(4, 107, 252);
+      color: white;
+    }
+  } 
+
+
+  /* Animate */
+
+  :root {
+    --animate-duration: 2s;
+  }
