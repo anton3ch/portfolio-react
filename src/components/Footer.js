@@ -2,6 +2,7 @@ import React from 'react';
 import mail from "./../img/mail.png";
 import github from "./../img/github.png";
 import instagram from "./../img/instagram.png";
+import linkedin from "./../img/linkedin.png";
 
 export default function Footer() {
   return (
@@ -20,6 +21,11 @@ export default function Footer() {
     <a href="https://www.instagram.com/antony.chase/" rel="noreferrer" target="_blank">
               <img src={instagram} alt="Instagram Icon" />
             </a>
+
+    <a href="https://www.linkedin.com/in/anton3ch/" rel="noreferrer" target="_blank">
+              <img src={linkedin} alt="LinkedIn Icon" />
+            </a>
+
   </div>
   <div className="text-center p-2 footer-bg"> © 2023 Copyright: <span className="text-reset fw-bold">Anton Ch</span>
   </div>
