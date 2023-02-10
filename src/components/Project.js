@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function Project(props) {
   return(
-    <div className="col-md-4 project">
+    <div className="col-lg-4 project">
       <div className="card card-s animate__animated animate__headShake">
         <div className="card-body">
           <h3 className="card-title text-center"><a href={props.deployedLink} target="_blank" rel="noreferrer">{props.projectName}</a></h3>

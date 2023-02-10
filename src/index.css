@@ -18,12 +18,12 @@ code {
 #root {
   padding-top: 1vw;
   padding-bottom: 1vw;
-  background: rgb(16,175,161);
+  background: rgb(255, 255, 255);
   background: radial-gradient(circle, rgb(36, 18, 151) 55%, rgb(255, 42, 42) 100%);
 }
 
 footer-bg {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
   /* Previous */
@@ -31,7 +31,7 @@ footer-bg {
 
 .container {
   max-width: 1200px !important;
-  background-color: rgba(223, 222, 222, 0.69);
+  background-color: rgba(223, 222, 222, 0.844);
   font-family: 'Raleway', sans-serif;
   padding-top: 1rem;
   border-radius: 10px;
@@ -93,10 +93,25 @@ a:hover{
   
 }
 
-@media only screen and (max-width: 600px) {
+.footer-icons {
+  display: none;
+}
+
+@media only screen and (max-width: 1300px) {
 
   #icons img {
     display: none;
+  }
+
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-icons img{
+    
+    margin: 5px 10px;
+    width: 2em;
   }
 }
 
@@ -154,13 +169,12 @@ a:hover{
   font-size: 1.5rem;
 }
 
-@media only screen and (min-width: 768px) {
+.ci{
+  max-height: 250px;
+  object-fit: scale-down;
+}
 
-  .card-img {
-    border: 2px solid purple;
-    padding: 2px;
-  }
-
+@media only screen and (min-width: 1050px) {
   .ci{
     display: block;
     box-sizing: border-box;
@@ -169,11 +183,17 @@ a:hover{
     margin: auto;
     object-fit: scale-down;
   }
+}
+@media only screen and (min-width: 768px) {
+
+  .card-img {
+    border: 2px solid purple;
+    padding: 2px;
+  }
 
   .card-s {
     display: flex;
     min-height: 55vw;
-    position: relative;
   }
 
   .card-footer {
@@ -196,14 +216,14 @@ ol {
 @media only screen and (min-width: 768px) {
   .card-s {
     min-height: 10vw;
-    height: 750px !important;
+    min-height: 750px !important;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .card-s {
     min-height: 10vw;
-    height: 750px !important;
+    min-height: 750px !important;
   }
   
 }
