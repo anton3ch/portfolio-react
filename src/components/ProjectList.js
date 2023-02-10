@@ -20,7 +20,7 @@ import rpgAgeImgGit from './../img/git-cover5.png';
 function ProjectList(){
   return ( 
     <React.Fragment>
-      <h2 className="mx-3 mt-3 mb-3">My projects</h2>
+      <h2 className="mx-3 mt-3 mb-3 heading2">My projects</h2>
       <hr className="mx-3"/>
       <div className="projectList">
         {mainProjectList.map((project) =>

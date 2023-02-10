@@ -31,23 +31,41 @@ footer-bg {
 
 .container {
   max-width: 1200px !important;
-  background-color: rgba(223, 222, 222, 0.844);
+  position: relative;
+  background-color: rgba(223, 222, 222, 0.373);
   font-family: 'Raleway', sans-serif;
   padding-top: 1rem;
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+  }
+  #root {
+    padding: 0;
+  }
+
+}
+
 /* Anchors */
 
+.heading2 {
+  text-shadow: 0px 0px 15px rgb(255, 0, 0);
+  color: white;
+}
+
 a {
-  background: -webkit-linear-gradient(rgb(55, 0, 255), rgb(255, 0, 221));
+  background: -webkit-linear-gradient(rgb(255, 194, 194), rgb(184, 173, 255));
+  /* text-shadow: 1px 1px rgb(255, 255, 255); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 1000;
 }
 
 .card-footer a {
-  background: -webkit-linear-gradient(rgb(253, 98, 98), rgb(159, 139, 237));
+  background: -webkit-linear-gradient(rgb(255, 194, 194), rgb(184, 173, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 1000;
@@ -55,6 +73,7 @@ a {
 
 #myName {
   background: -webkit-linear-gradient(rgb(150, 101, 241), rgb(228, 146, 255));
+  text-shadow: 5px 2px rgb(255, 255, 255);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 1000;
@@ -69,8 +88,10 @@ a {
 
 a:hover{
   text-decoration: none;
-  color: rgb(255, 0, 119);
-  -webkit-text-fill-color: red;
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 1000;
 }
 
 /* Navigation */
@@ -118,7 +139,7 @@ a:hover{
 /* Intro section */
 
 .jumbotron {
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   display: flex !important;
   padding-right: 0;
 }
@@ -137,18 +158,36 @@ a:hover{
   font-size: 3.5rem !important;
 }
 
+
 .mePhotoContainer {
-  display: flex;
-  position: sticky;
-  align-items: flex-end;
-  justify-content: flex-end;
+  /* display: flex; */
+  position: relative;
+  bottom: -105px;
+
+  /* position: sticky; */
+  /* align-items: flex-end;
+  justify-content: flex-end; */
   padding: 0;
   margin: 0;
+  margin-right: 0;
+  /* transform: rotate(-90deg); */
 }
 
 #mePhoto {
-  width: 19rem;
+  width: 18rem;
   display: block;
+}
+
+@media only screen and (max-width: 1100px) {
+  #mePhoto{
+    transform: rotate(-180deg);
+
+  }
+
+  .mePhotoContainer {
+    bottom: 24px;
+  }
+
 }
 
 @media only screen and (max-width: 990px) {
@@ -171,7 +210,13 @@ a:hover{
 
 .ci{
   max-height: 250px;
+  background-color: rgb(255, 255, 255);
   object-fit: scale-down;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.095) !important;
+  color: rgb(255, 255, 255);
 }
 
 @media only screen and (min-width: 1050px) {
@@ -210,9 +255,7 @@ a:hover{
   padding-top: 10px;
 }
 
-ol {
-  padding-bottom: 40px;
-}
+
 @media only screen and (min-width: 768px) {
   .card-s {
     min-height: 10vw;
@@ -246,7 +289,7 @@ ol {
 .intro {
   display: flex;
   justify-content: space-between;
-  color: rgb(192, 191, 191);
+  color: rgb(255, 255, 255);
   -webkit-animation-name: flash-txt;
   animation-name: flash-txt;
   -webkit-animation-duration: 5.5s;
@@ -255,6 +298,8 @@ ol {
   animation-iteration-count: 2;
   animation-direction: normal;
   border-radius: 10px;
+  text-shadow: 2px 2px 18px rgb(4, 107, 252);
+
 }
 
 .projectList {
@@ -272,8 +317,8 @@ ol {
   /* animation */
   @keyframes flash-txt {
     0% {
-      text-shadow: 2px 2px 18px rgb(4, 252, 83);
-      color: white;
+      text-shadow: 2px 2px 18px rgb(0, 255, 81);
+      color: rgb(0, 0, 0);
   }
     18% {
       text-shadow: 2px 2px 18px rgb(4, 107, 252);
@@ -285,7 +330,7 @@ ol {
     }
     22% {
       text-shadow: 2px 2px 18px rgb(252, 4, 231);
-      color: white;
+      color: rgb(0, 0, 0);
     }
     24% {
       text-shadow: none;
@@ -305,7 +350,7 @@ ol {
     }
     57% {
       text-shadow: 2px 2px 8px rgb(252, 4, 231);
-      color: white;
+      color: rgb(0, 0, 0);
     }
     100% {
       text-shadow: 2px 2px 8px rgb(4, 107, 252);

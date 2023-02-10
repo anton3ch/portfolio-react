@@ -1,10 +1,10 @@
 import React from 'react';
-import vampireKid from "./../img/vampire.jpg";
+import vampireKid from "./../img/vampire.png";
 
 export default function AboutMe(){
   return (
     <div className="about animate__animated animate__headShake mx-3">
-    <h2 className="mt-4 mb-2">About me</h2>
+    <h2 className="mt-4 mb-2 heading2">About me</h2>
     <hr/>
     <div className="row mb-4">
       <div className="col-md-12">
