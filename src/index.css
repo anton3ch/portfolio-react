@@ -157,10 +157,17 @@ a:hover{
 @media only screen and (min-width: 768px) {
 
   .card-img {
-    /* height: 22vw;
-    max-height: 300px; */
     border: 2px solid purple;
     padding: 2px;
+  }
+
+  .ci{
+    display: block;
+    box-sizing: border-box;
+    width: 320px !important;
+    height: 212px;
+    margin: auto;
+    object-fit: scale-down;
   }
 
   .card-s {
