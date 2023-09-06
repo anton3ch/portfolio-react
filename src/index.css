@@ -85,6 +85,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 1000;
+  
 }
 
 
@@ -94,6 +95,7 @@ a:hover{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 1000;
+
 }
 
 /* Navigation */
