@@ -1,5 +1,5 @@
 import React from "react";
-import mePhoto from "./../img/tony.png";
+// import mePhoto from "./../img/tony.png";
 
 function Intro() {
   return (
