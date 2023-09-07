@@ -247,7 +247,7 @@ a:hover{
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .ci{
@@ -319,7 +319,7 @@ a:hover{
   .card-footer {
     position: absolute;
     bottom: 0px;
-    width: 88%;
+    /* width: 88%; */
   }
 
   .project {
@@ -327,8 +327,10 @@ a:hover{
   }
 }
 .card-text {
-  padding-inline: 20px;
+  padding: 0 20px;
+  margin-block: 0.5em;
   font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
 }
 
 
@@ -511,6 +513,22 @@ a:hover{
 
 }
 
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .aboutText{
-  max-width: 70%;
+  max-width: 60%;
+}
+
+.cardAbout{
+  display: flex;
+  justify-content: center;
+}
+
+.techList {
+  padding-left: 50px;
 }

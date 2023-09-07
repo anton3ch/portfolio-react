@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ScrollReveal from "scrollreveal";
 
 function Project(props) {
   return (
@@ -24,7 +25,7 @@ function Project(props) {
           <h5 className="card-text">Description:</h5>
           <p className="card-text">{props.description}</p>
           <h5 className="card-text">Technologies Used:</h5>
-          <ul className="card-text">
+          <ul className="card-text techList">
             {props.technologies.map((technology, i) => {
               return (
                 <li key={i}>
@@ -37,11 +38,24 @@ function Project(props) {
           </ul>
           <p className="card-footer text-center">
             <a href={props.gitRepo} target="_blank" rel="noreferrer">
-              github repository
+              GitHub repository
             </a>
           </p>
         </div>
       </div>
+      {ScrollReveal().reveal(".project", {
+        delay: 200,
+        distance: "50px",
+        duration: 600,
+        useDelay: "once",
+        reset: true,
+      })}
+
+      {/* {ScrollReveal().reveal(".card-body", {
+        delay: 250,
+        interval: 0,
+        reset: true,
+      })} */}
     </div>
   );
 }

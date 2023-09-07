@@ -9,7 +9,7 @@ function Intro() {
         <h2 className="intro-name">
           I'm{" "}
           <a
-            href="https://github.com/anton3ch"
+            href="https://www.linkedin.com/in/anton3ch/"
             target="_blank"
             id="myName"
             rel="noreferrer"
