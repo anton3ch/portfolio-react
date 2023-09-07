@@ -9,7 +9,7 @@ export default function AboutMe() {
       <div className="row mb-4">
         <div className="col-md-12">
           <div className="card">
-            <div className="card-body">
+            <div className="card-body aboutText">
               <p>
                 I'm an inquisitive Software Engineer with a diverse background
                 and passion for science that fuels my enthusiasm for continuous

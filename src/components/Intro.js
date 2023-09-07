@@ -4,8 +4,8 @@ import React from "react";
 function Intro() {
   return (
     <div className="jumbotron p-2 ps-0 pb-0 intro mx-3" id="intro">
-      <div>
-        <h1 className="intro">Hey</h1>
+      <div className="innerIntro">
+        <h1 className="introHey">Hey</h1>
         <h2 className="intro-name">
           I'm{" "}
           <a

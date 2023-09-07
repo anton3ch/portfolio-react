@@ -17,28 +17,30 @@ import currencyAgeImgGit from "./../img/git-cover4.jpg";
 import rpgAgeImg from "./../img/rpg.webp";
 import rpgAgeImgGit from "./../img/git-cover5.png";
 
-import notemeImg from "./../img/noteme.webp";
+import notemeImg from "./../img/noteme2.png";
 import notemeImgGit from "./../img/git-cover7.webp";
 
 function ProjectList() {
   return (
     <React.Fragment>
-      <h2 className="mx-3 mt-3 mb-3 heading2">My projects</h2>
-      <hr className="mx-3" />
-      <div className="projectList">
-        {mainProjectList.map((project) => (
-          <Project
-            deployedLink={project.deployedLink}
-            projectName={project.projectName}
-            key={v4()}
-            img={project.img}
-            imgAlt={project.imgAlt}
-            imgGit={project.imgGit}
-            description={project.description}
-            gitRepo={project.gitRepo}
-            technologies={project.technologies}
-          />
-        ))}
+      <div className="projectContainer">
+        <h2 className="sectionTitle">PROJECTS</h2>
+        {/* <hr className="mx-3" /> */}
+        <div className="projectList">
+          {mainProjectList.map((project) => (
+            <Project
+              deployedLink={project.deployedLink}
+              projectName={project.projectName}
+              key={v4()}
+              img={project.img}
+              imgAlt={project.imgAlt}
+              imgGit={project.imgGit}
+              description={project.description}
+              gitRepo={project.gitRepo}
+              technologies={project.technologies}
+            />
+          ))}
+        </div>
       </div>
     </React.Fragment>
   );

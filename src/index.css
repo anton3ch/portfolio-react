@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 @import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
 
-/* body {
+
+body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} */
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -17,8 +18,12 @@ code {
 
 #root {
 
-  background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgb(36, 18, 151) 55%, rgb(255, 42, 42) 100%);
+  /* background: rgb(255, 255, 255); */
+  background:rgb(0, 0, 0);
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
 }
 
 footer-bg {
@@ -28,14 +33,24 @@ footer-bg {
   /* Previous */
 
 .outer-box{
-    background-color: rgba(223, 222, 222, 0.373);
+    background-color: rgba(106, 91, 91, 0.373);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
 }
 .container {
-  max-width: 1200px !important;
-  position: relative;
+  /* max-width: 1200px !important; */
+  /* filter: blur(8px); */
 
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
   font-family: 'Raleway', sans-serif;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   border-radius: 10px;
 }
 
@@ -155,9 +170,12 @@ a:hover{
 /* Intro section */
 
 .jumbotron {
-  /* background-color: rgb(255, 255, 255); */
+  background-color: rgba(0, 0, 0, 0.495) !important;
+  width: 100%;
   display: flex !important;
-  padding-right: 0;
+  box-sizing: border-box;
+
+  padding-inline: 20px;
 }
 
 #intro h1 {
@@ -220,18 +238,34 @@ a:hover{
 
 /* My projects section */
 
+
+.sectionTitle {
+  font-size: 4em;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(223, 223, 223);
+  margin-block: 10px;
+}
+
 .card-title {
   font-size: 1.5rem;
 }
 
 .ci{
-  max-height: 250px;
-  background-color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 0;
+  /* max-height: 250px; */
+  /* background-color: rgb(255, 255, 255); */
   object-fit: scale-down;
+  margin: 0;
 }
 
 .card {
   transition: all .2s ease-in;
+  padding: 0px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card:hover {
   transform: scale(1.02);
@@ -246,11 +280,12 @@ a:hover{
 
 
 .card {
-  background-color: rgba(0, 0, 0, 0.095) !important;
+  background-color: rgba(0, 0, 0, 0.495) !important;
   color: rgb(255, 255, 255);
+  border: 0 !important;
 }
 
-@media only screen and (min-width: 1050px) {
+/* @media only screen and (min-width: 1050px) {
   .ci{
     display: block;
     box-sizing: border-box;
@@ -259,16 +294,25 @@ a:hover{
     margin: auto;
     object-fit: scale-down;
   }
-}
+} */
 @media only screen and (min-width: 768px) {
 
-  .card-img {
-    border: 2px solid purple;
-    padding: 2px;
+  /* .card-img img {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
   }
 
+  .card-img {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  } */
+
   .card-s {
-    display: flex;
+    /* display: flex; */
     min-height: 55vw;
   }
 
@@ -283,7 +327,8 @@ a:hover{
   }
 }
 .card-text {
-  padding-top: 10px;
+  padding-inline: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -319,7 +364,7 @@ a:hover{
 
 .intro {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   color: rgb(255, 255, 255);
   -webkit-animation-name: flash-txt;
   animation-name: flash-txt;
@@ -328,9 +373,26 @@ a:hover{
   -webkit-animation-iteration-count: 2;
   animation-iteration-count: 2;
   animation-direction: normal;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   text-shadow: 2px 2px 18px rgb(4, 107, 252);
 
+}
+
+.innerIntro {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  max-width: 60%;
+  /* justify-content: flex-start; */
+}
+
+
+.projectContainer{
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectList {
@@ -437,3 +499,18 @@ a:hover{
   :root {
     --animate-duration: 2s;
   }
+
+  .text-center{
+    align-self: center;
+  }
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+}
+
+.aboutText{
+  max-width: 70%;
+}
