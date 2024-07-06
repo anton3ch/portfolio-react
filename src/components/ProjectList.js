@@ -97,7 +97,7 @@ const mainProjectList = [
     imgAlt: "Neighborhood app screenshot",
     imgGit: neighborhoodImgGit,
     description:
-      "Neighborhood application takes a number from a user and returns a range of numbers from 0 to the user inputted number with substitutions: 'Beep,' 'Boop,' and 'Won't you be my neighbor?' instead of 1, 2, and 3 respectively.",
+      "A robust neighborhood application that takes a user input and generates a range of numbers from 0 to the provided value with seamless substitutions. Implemented Jest unit testing for reliability and bug-free user experience.",
     gitRepo: "",
     technologies: [
       {

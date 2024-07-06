@@ -30,6 +30,11 @@ footer-bg {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.footer-text {
+  margin: 10px;
+  color: #dadada;
+}
+
   /* Previous */
 
 .outer-box{
@@ -140,6 +145,7 @@ a:hover{
 }
 
 .footer-icons {
+  margin-top: 15px;
   display: none;
 }
 
@@ -531,4 +537,115 @@ a:hover{
 
 .techList {
   padding-left: 50px;
+}
+
+.cardForm{
+  display: flex;
+  /* justify-content: center;
+  align-items: center;  */
+  width: 80%;
+  padding: 20px;
+}
+
+.formBody{
+  display: flex;
+  width: 100%;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  padding: 0;
+
+}
+
+.formBody > * {
+  margin: 10px;
+}
+
+.formElement{
+  text-align: center;
+}
+
+.formComment {
+  min-width: 60%;
+  min-height: 100px;
+}
+
+.feedback {
+  color: rgb(255, 0, 0) ;
+} 
+
+.text-sm {
+  font-size: 0.7rem;
+}
+
+.placeholderForm {
+  display: block;
+  box-sizing: content-box;
+  height: 0.8rem;
+}
+
+.formButton {
+  background-color: #555555; /* Light grey background */
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  box-shadow: rgba(90, 90, 90, 0.5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #dadada; /* Dark grey text color */
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember", sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+  align-self: center;
+}
+
+.formButton:hover {
+  background-color: #e6e6e6; /* Lighter grey on hover */
+  color: #717171; /* Dark grey text color */
+}
+
+.formButton:active {
+  border-color: #595959; /* Dark grey border on focus */
+  box-shadow: rgba(92, 92, 92, 0.5) 0 2px 5px 0;
+  outline: 0;
+  transform: scale(0.95);
+}
+
+input, textarea {
+  background-color: #333;
+  color: #fff; /* Text color */
+  border: 1px solid #555; /* Border color */
+  padding: 10px; /* Adjust padding as needed */
+  border-radius: 4px; /* Optional: Rounded corners */
+  outline: #ccc;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00ff33;
+  box-shadow: 0 0 5px rgba(204, 204, 204, 0.5); /* Optional: Add a subtle box shadow */
+}
+
+/* Style placeholder text for both input and textarea */
+input::placeholder, textarea::placeholder {
+  color: #ccc; /* Placeholder text color */
+}
+
+/* Apply hover effect to both input and textarea */
+input:hover, textarea:hover {
+  border-color: #777; /* Adjust hover border color as needed */
+}
+
+
+label {
+  display: block; /* Make labels block-level elements */
+  margin-bottom: 5px; /* Add spacing between label and input field */
 }
