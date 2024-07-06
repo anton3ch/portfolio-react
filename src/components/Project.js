@@ -5,7 +5,7 @@ import ScrollReveal from "scrollreveal";
 function Project(props) {
   return (
     <div className="col-lg-4 project">
-      <div className="card card-s animate__animated animate__headShake">
+      <div className="card card-s">
         <a href={props.deployedLink} target="_blank" rel="noreferrer">
           {" "}
           <img

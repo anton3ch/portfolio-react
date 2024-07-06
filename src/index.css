@@ -344,9 +344,14 @@ a:hover{
 }
 .card-text {
   padding: 0 20px;
-  margin-block: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
+}
+
+p.card-text  {
+  margin-top: 0;
 }
 
 
