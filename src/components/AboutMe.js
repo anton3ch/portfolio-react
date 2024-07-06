@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 export default function AboutMe() {
   return (
     <div className="about animate__animated animate__headShake mx-3">
-      <h2 className="sectionTitle">About me</h2>
+      <h2 className="sectionTitle">ABOUT</h2>
       {/* <hr /> */}
       <div className="card cardAbout">
         <div className="card-body aboutText">

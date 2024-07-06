@@ -100,7 +100,7 @@ const LandingSection = () => {
 
   return (
     <div className="contact">
-      <h2 className="sectionTitle">Contact me</h2>
+      <h2 className="sectionTitle">CONTACT ME</h2>
       <FormikProvider value={formik}>
         <div className="card cardForm">
           <Form className="formBody">
