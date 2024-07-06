@@ -1,6 +1,6 @@
 import React from "react";
 import vampireKid from "./../img/vampire.png";
-
+import { Typography } from "@mui/material";
 export default function AboutMe() {
   return (
     <div className="about animate__animated animate__headShake mx-3">
@@ -8,7 +8,7 @@ export default function AboutMe() {
       {/* <hr /> */}
       <div className="card cardAbout">
         <div className="card-body aboutText">
-          <p>
+          <Typography className="text-justify">
             I'm an inquisitive Software Engineer with a diverse background and
             passion for science that fuels my enthusiasm for continuous
             learning. My journey has granted me a unique perspective, which I
@@ -35,8 +35,8 @@ export default function AboutMe() {
             engagement by 40%. My commitment to responsive design principles
             resulted in a 20% increase in mobile traffic and ensured a
             consistent user experience across devices.
-          </p>
-          <img className="float" src={vampireKid} alt="vampire kid" />
+          </Typography>
+          {/* <img className="float" src={vampireKid} alt="vampire kid" /> */}
         </div>
       </div>
     </div>

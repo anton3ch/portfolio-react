@@ -6,20 +6,23 @@ import React from "react";
 import Footer from "./Footer";
 import ContactMeSection from "./ContactMeSection";
 import { Helmet } from "react-helmet";
+import { ThemeProvider, CssBaseline, Container } from "@mui/material";
 
 function App() {
   return (
     <div className="outer-box">
       <div className="container pb-1">
-        <Helmet>
-          <title>Anton Ch</title>
-        </Helmet>
+        <CssBaseline />
+        {/* <Helmet>0 */}
+        <title>Anton Ch</title>
+        {/* </Helmet> */}
         <Intro />
-        <ProjectList />
-        <AboutMe />
-        <ContactMeSection />
-        <SidePanel />
-
+        <Container>
+          <ProjectList />
+          <AboutMe />
+          <ContactMeSection />
+          <SidePanel />
+        </Container>
         <Footer />
       </div>
     </div>

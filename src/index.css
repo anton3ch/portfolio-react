@@ -1,6 +1,8 @@
 @import 'animate.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0;
@@ -9,6 +11,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 code {
@@ -39,10 +45,10 @@ footer-bg {
 
 .outer-box{
     background-color: rgba(106, 91, 91, 0.373);
-    width: 100%;
+    width: 100% !important;
     margin: 0;
     padding: 0;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     
 }
@@ -527,7 +533,7 @@ a:hover{
 }
 
 .aboutText{
-  max-width: 60%;
+  padding: 2rem;
 }
 
 .cardAbout{
@@ -539,12 +545,19 @@ a:hover{
   padding-left: 50px;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .cardForm{
   display: flex;
   /* justify-content: center;
   align-items: center;  */
-  width: 80%;
-  padding: 20px;
+  width: 100%;
+  padding: 2rem;
 }
 
 .formBody{

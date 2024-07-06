@@ -15,14 +15,14 @@ export default function Footer() {
         <a href="https://github.com/anton3ch" rel="noreferrer" target="_blank">
           <img src={github} alt="GitHub Icon" />
         </a>
-
+        {/* 
         <a
           href="https://www.instagram.com/antony.chase/"
           rel="noreferrer"
           target="_blank"
         >
           <img src={instagram} alt="Instagram Icon" />
-        </a>
+        </a> */}
 
         <a
           href="https://www.linkedin.com/in/anton3ch/"
