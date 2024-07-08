@@ -10,15 +10,8 @@ const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
   const [field, meta] = useField(props);
   const [didFocus, setDidFocus] = React.useState(false);
   const [showFeedback, setShowFeedback] = React.useState(false);
-  const handleFocus = () => {
-    setDidFocus(true);
-    console.log("hello", meta.error);
-  };
-  // const showFeedback =
-  //   (didFocus && field.value.trim().length > 0) || meta.touched;
 
   React.useEffect(() => {
-    console.log("hello", meta.error);
     if ((didFocus && field.value.trim().length > 0) || meta.touched) {
       setShowFeedback(true);
     }
@@ -85,6 +78,7 @@ const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
 const LandingSection = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const formik = useFormik({
     initialValues: {
@@ -94,27 +88,33 @@ const LandingSection = () => {
     },
     onSubmit: async (values, { resetForm }) => {
       setIsLoading(true);
+      setErrorMessage("");
       await sleep(500);
 
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "2f782ea6-4b9d-48e6-be85-e8c784d9a606",
-          ...values,
-        }),
-      });
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: "2f782ea6-4b9d-48e6-be85-e8c784d9a606",
+            ...values,
+          }),
+        });
 
-      setIsLoading(false);
+        setIsLoading(false);
 
-      if (response.ok) {
+        if (response.ok) {
+          setFormSubmitted(true);
+          resetForm();
+        }
+      } catch (error) {
         setFormSubmitted(true);
-        resetForm();
-      } else {
-        alert("There was an error submitting the form.");
+        console.log("error ", error);
+        setIsLoading(false);
+        setErrorMessage(`${error.message}`);
       }
     },
     validationSchema: Yup.object({
@@ -135,21 +135,39 @@ const LandingSection = () => {
       <FormikProvider value={formik}>
         <div className="card cardForm">
           {formSubmitted ? (
-            <div className="formSuccess">
-              <h3 className="thankYouMessage">Thank You!</h3>
-              <div className="successMessage">
-                <div className="checkmark">✓</div>
-                <h4>The form has been submitted!</h4>
+            errorMessage ? (
+              <div className="formError">
+                <div className="errorIcon">😖</div>
+                <h3>Yikes! An error occurred.</h3>
+                <h4>Error: {errorMessage}</h4>
+                <button
+                  type="button"
+                  className="formButton"
+                  onClick={() => {
+                    setFormSubmitted(false);
+                    setErrorMessage("");
+                  }}
+                >
+                  Try Again
+                </button>
               </div>
+            ) : (
+              <div className="formSuccess">
+                <h3 className="thankYouMessage">Thank You!</h3>
+                <div className="successMessage">
+                  <div className="checkmark">✓</div>
+                  <h4>The form has been submitted!</h4>
+                </div>
 
-              <button
-                type="button"
-                className="formButton"
-                onClick={() => setFormSubmitted(false)}
-              >
-                Submit Another Form
-              </button>
-            </div>
+                <button
+                  type="button"
+                  className="formButton"
+                  onClick={() => setFormSubmitted(false)}
+                >
+                  Submit Another Form
+                </button>
+              </div>
+            )
           ) : isLoading ? (
             <div className="loading">
               <div className="spinner"></div>

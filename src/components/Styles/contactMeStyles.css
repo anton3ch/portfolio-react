@@ -138,3 +138,28 @@ label {
   display: block; /* Make labels block-level elements */
   margin-bottom: 5px; /* Add spacing between label and input field */
 }
+
+.formError {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: red;
+}
+
+.formError h3, h4 {
+  margin: 0;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+
+.formError h4 {
+  margin-bottom: 1rem;
+}
+
+.errorIcon {
+  font-size: 2rem;
+  color: red;
+}
