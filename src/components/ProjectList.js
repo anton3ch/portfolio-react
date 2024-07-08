@@ -20,6 +20,10 @@ import rpgAgeImgGit from "./../img/git-cover5.png";
 import notemeImg from "./../img/noteme2.png";
 import notemeImgGit from "./../img/git-cover7.webp";
 
+import taskWaveImg from "./../img/TaskWave.png";
+
+import quackWashImg from "./../img/quackwash.webp";
+
 function ProjectList() {
   return (
     <React.Fragment>
@@ -48,17 +52,94 @@ function ProjectList() {
 
 const mainProjectList = [
   {
+    deployedLink: "",
+    projectName: "AI TaskWave",
+    img: taskWaveImg,
+    imgAlt: "Note Me App screenshot",
+    imgGit: notemeImgGit,
+    description:
+      "An iOS app designed using SwiftUI that leverages large language models (LLMs) to enhance productivity and task management. It provides users with intelligent task generation and automated modifier prioritization, ensuring efficient and personalized task handling. With a focus on seamless user experience, AI TaskWave integrates advanced AI capabilities to streamline daily workflows and boost productivity.",
+    gitRepo: "",
+    technologies: [
+      {
+        name: "SwiftUI",
+        link: "https://developer.apple.com/xcode/swiftui/",
+      },
+      {
+        name: "SwiftData",
+        link: "https://developer.apple.com/documentation/swiftdata",
+      },
+      {
+        name: "Swift",
+        link: "https://swift.org",
+      },
+      {
+        name: "ChatGPT",
+        link: "https://openai.com/chatgpt",
+      },
+      {
+        name: "RESTful APIs",
+        link: "https://restfulapi.net",
+      },
+    ],
+  },
+  {
+    deployedLink: "https://quackwash1.netlify.app/",
+    projectName: "QuackWash",
+    img: quackWashImg,
+    imgAlt: "QuackWash web app screenshot",
+    imgGit: notemeImgGit,
+    description:
+      "Quack Wash is a responsive web application designed for a window cleaning service. The app includes animations and interactive elements to enhance user experience. The design uses the brand colors and incorporates a dark mode for better accessibility and user comfort.",
+    gitRepo: "",
+    technologies: [
+      {
+        name: "React",
+        link: "https://reactjs.org",
+      },
+      {
+        name: "Material-UI",
+        link: "https://mui.com",
+      },
+      {
+        name: "Tailwind CSS",
+        link: "https://tailwindcss.com",
+      },
+      {
+        name: "TypeScript",
+        link: "https://www.typescriptlang.org",
+      },
+      {
+        name: "Framer Motion",
+        link: "https://www.framer.com/motion/",
+      },
+    ],
+  },
+  {
     deployedLink: "https://github.com/anton3ch/Note-Me-App",
     projectName: "Note Me App",
     img: notemeImg,
     imgAlt: "Note Me App screenshot",
     imgGit: notemeImgGit,
-    description: "A note app that lets users schedule Note Reminders.",
+    description:
+      "A React Native application designed for efficient note-taking. It allows users to create, organize, and manage their notes with ease. The app features a clean and intuitive interface, providing functionalities such as adding new notes, editing existing ones, and categorizing notes for better organization.",
     gitRepo: "https://github.com/anton3ch/Note-Me-App",
     technologies: [
       {
         name: "React Native",
         link: "https://reactnative.dev",
+      },
+      {
+        name: "Redux",
+        link: "https://redux.js.org",
+      },
+      {
+        name: "React Navigation",
+        link: "https://reactnavigation.org",
+      },
+      {
+        name: "Expo",
+        link: "https://expo.dev",
       },
     ],
   },

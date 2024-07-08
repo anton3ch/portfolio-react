@@ -260,6 +260,7 @@ a:hover{
 
 .card-title {
   font-size: 2rem;
+  margin: 0.7rem 0;
 }
 
 .ci{
@@ -288,7 +289,7 @@ a:hover{
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .ci{
     background-color: rgba(255, 255, 255, 0);
   }
@@ -311,12 +312,12 @@ a:hover{
     object-fit: scale-down;
   }
 } */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 784px) {
 
   /* .card-img img {
     width: 100%;
     border: 0;
-    padding: 0;
+    padding: 0;z
     margin: 0;
   }
 
@@ -327,10 +328,7 @@ a:hover{
     margin: 0;
   } */
 
-  .card-s {
-    /* display: flex; */
-    min-height: 55vw;
-  }
+
 
   .card-footer {
     margin-top: auto;  /* Pushes footer to the bottom */
@@ -340,6 +338,7 @@ a:hover{
 
   .project {
     min-width: 360px;
+    max-width: 32%;
   }
 }
 .card-text {
@@ -354,26 +353,13 @@ p.card-text  {
   margin-top: 0;
 }
 
-
-@media only screen and (min-width: 768px) {
-  .card-s {
-    min-height: 10vw;
-    min-height: 750px !important;
-  }
+h5.card-text  {
+  font-size: 1.2rem;
 }
 
-@media only screen and (min-width: 900px) {
-  .card-s {
-    min-height: 10vw;
-    min-height: 750px !important;
-  }
-  
-}
-@media only screen and (max-width: 900px) {
-  .card-title {
-    font-size: 1.2rem;
-  }
-}
+
+
+
 /* About me */
 
 
@@ -421,7 +407,7 @@ p.card-text  {
 .projectList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 1rem;
 }
 
@@ -431,7 +417,15 @@ p.card-text  {
   min-width: 360px;
 }
 
+@media only screen and (min-width: 784px) and (max-width: 1159px) {
+  .projectList {
+    justify-content: space-around;
+  }
 
+  .project {
+    flex: 1 1 30%;
+  }
+}
 
   /* animation */
   @keyframes flash-txt {

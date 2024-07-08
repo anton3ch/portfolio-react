@@ -1,0 +1,93 @@
+.thankYouMessage {
+  margin: 0;
+}
+
+.formSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.successMessage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+  margin-bottom: 1rem;
+}
+
+.successMessage h4 {
+  margin: 0;
+  text-align: center;
+  width: 100%; /* Ensures the text is centered */
+}
+
+.checkmark {
+  font-size: 1.5rem;
+  color: green;
+  position: absolute;
+  left: -25px; /* Position checkmark to the left of the text */
+}
+
+.formButton {
+  background-color: #555555; /* Light grey background */
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  box-shadow: rgba(90, 90, 90, 0.5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #dadada; /* Dark grey text color */
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember", sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  min-width: 150px; /* Ensure button width accommodates the text */
+}
+
+.formButton:hover {
+  background-color: #e6e6e6; /* Lighter grey on hover */
+  color: #717171; /* Dark grey text color */
+}
+
+.formButton:active {
+  border-color: #595959; /* Dark grey border on focus */
+  box-shadow: rgba(92, 92, 92, 0.5) 0 2px 5px 0;
+  outline: 0;
+  transform: scale(0.95);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust the height as needed */
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #555555; /* Dark grey */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

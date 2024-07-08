@@ -22,7 +22,7 @@ function Project(props) {
               {props.projectName}
             </a>
           </h3>
-          <h5 className="card-text">Description:</h5>
+          {/* <h5 className="card-text">Description:</h5> */}
           <p className="card-text">{props.description}</p>
           <h5 className="card-text">Technologies Used:</h5>
           <ul className="card-text techList">
@@ -37,9 +37,11 @@ function Project(props) {
             })}
           </ul>
           <p className="card-footer text-center">
-            <a href={props.gitRepo} target="_blank" rel="noreferrer">
-              GitHub repository
-            </a>
+            {props.gitRepo && (
+              <a href={props.gitRepo} target="_blank" rel="noreferrer">
+                GitHub repository
+              </a>
+            )}
           </p>
         </div>
       </div>

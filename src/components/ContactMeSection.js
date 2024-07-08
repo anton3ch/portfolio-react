@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from "react";
 import { useFormik, FormikProvider, Form, useField } from "formik";
 import "./../index.css";
+import "./Styles/contactMeStyles.css"; // Import the new CSS file
 import * as Yup from "yup";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -9,9 +9,6 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
   const [field, meta] = useField(props);
 
-  // Show inline feedback if EITHER
-  // - the input is focused AND value is longer than 2 characters
-  // - or, the has been visited (touched === true)
   const [didFocus, setDidFocus] = React.useState(false);
   const handleFocus = () => setDidFocus(true);
   const showFeedback =
@@ -67,6 +64,9 @@ const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
 };
 
 const LandingSection = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -74,9 +74,29 @@ const LandingSection = () => {
       comment: "",
     },
     onSubmit: async (values, { resetForm }) => {
+      setIsLoading(true);
       await sleep(500);
-      alert(JSON.stringify(values, null, 2));
-      resetForm();
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "2f782ea6-4b9d-48e6-be85-e8c784d9a606",
+          ...values,
+        }),
+      });
+
+      setIsLoading(false);
+
+      if (response.ok) {
+        setFormSubmitted(true);
+        resetForm();
+      } else {
+        alert("There was an error submitting the form.");
+      }
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -87,14 +107,6 @@ const LandingSection = () => {
       comment: Yup.string()
         .min(10, "Must be at least 10 characters!")
         .required("Required"),
-      // username: Yup.string()
-      //   .min(8, "Must be at least 8 characters")
-      //   .max(20, "Must be less  than 20 characters")
-      //   .required("Username is required")
-      //   .matches(
-      //     /^[a-zA-Z0-9]+$/,
-      //     "Cannot contain special characters or spaces"
-      //   ),
     }),
   });
 
@@ -103,32 +115,51 @@ const LandingSection = () => {
       <h2 className="sectionTitle">CONTACT ME</h2>
       <FormikProvider value={formik}>
         <div className="card cardForm">
-          <Form className="formBody">
-            <TextInputLiveFeedback
-              label="Name"
-              id="name"
-              name="name"
-              type="text"
-            />
-            <TextInputLiveFeedback
-              label="Email"
-              id="email"
-              name="email"
-              type="text"
-            />
-            <TextInputLiveFeedback
-              label="Comment"
-              id="comment"
-              name="comment"
-              // helpText="Must be at least 10 characters."
-              type="textarea"
-            />
+          {formSubmitted ? (
+            <div className="formSuccess">
+              <h3 className="thankYouMessage">Thank You!</h3>
+              <div className="successMessage">
+                <div className="checkmark">✓</div>
+                <h4>The form has been submitted!</h4>
+              </div>
 
-            <button type="submit" className="formButton">
-              Submit
-            </button>
-            {/* <button type="reset">Reset</button> */}
-          </Form>
+              <button
+                type="button"
+                className="formButton"
+                onClick={() => setFormSubmitted(false)}
+              >
+                Submit Another Form
+              </button>
+            </div>
+          ) : isLoading ? (
+            <div className="loading">
+              <div className="spinner"></div>
+            </div>
+          ) : (
+            <Form className="formBody">
+              <TextInputLiveFeedback
+                label="Name"
+                id="name"
+                name="name"
+                type="text"
+              />
+              <TextInputLiveFeedback
+                label="Email"
+                id="email"
+                name="email"
+                type="text"
+              />
+              <TextInputLiveFeedback
+                label="Comment"
+                id="comment"
+                name="comment"
+                type="textarea"
+              />
+              <button type="submit" className="formButton">
+                Submit
+              </button>
+            </Form>
+          )}
         </div>
       </FormikProvider>
     </div>
