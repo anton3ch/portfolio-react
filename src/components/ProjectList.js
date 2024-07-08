@@ -117,7 +117,7 @@ const mainProjectList = [
   },
   {
     deployedLink: "https://github.com/anton3ch/Note-Me-App",
-    projectName: "Note Me App",
+    projectName: "Note Me",
     img: notemeImg,
     imgAlt: "Note Me App screenshot",
     imgGit: notemeImgGit,

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useFormik, FormikProvider, Form, useField } from "formik";
-import "./../index.css";
+// import "./../index.css";
 import "./Styles/contactMeStyles.css"; // Import the new CSS file
 import * as Yup from "yup";
 
@@ -8,16 +8,30 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
   const [field, meta] = useField(props);
-
   const [didFocus, setDidFocus] = React.useState(false);
-  const handleFocus = () => setDidFocus(true);
-  const showFeedback =
-    (!!didFocus && field.value.trim().length > 2) || meta.touched;
+  const [showFeedback, setShowFeedback] = React.useState(false);
+  const handleFocus = () => {
+    setDidFocus(true);
+    console.log("hello", meta.error);
+  };
+  // const showFeedback =
+  //   (didFocus && field.value.trim().length > 0) || meta.touched;
+
+  React.useEffect(() => {
+    console.log("hello", meta.error);
+    if ((didFocus && field.value.trim().length > 0) || meta.touched) {
+      setShowFeedback(true);
+    }
+  }, [didFocus, meta.touched, field.value, meta.error]);
 
   return (
     <div
       className={`formElement ${
-        showFeedback ? (meta.error ? "invalid" : "valid") : ""
+        showFeedback
+          ? meta.error || meta.error === undefined
+            ? "invalid"
+            : "valid"
+          : ""
       }`}
     >
       <div>
@@ -28,34 +42,39 @@ const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
           {...props}
           {...field}
           aria-describedby={`${props.id}-feedback ${props.id}-help`}
-          onFocus={handleFocus}
-          className="formComment"
-          style={
-            showFeedback && meta.error ? { border: "1px solid red" } : null
-          }
+          onFocus={() => setDidFocus(true)}
+          className={`formComment ${
+            didFocus
+              ? meta.error || field.value.trim().length < 1
+                ? "invalid"
+                : "valid"
+              : ""
+          }`}
         />
       ) : (
         <input
           {...props}
           {...field}
           aria-describedby={`${props.id}-feedback ${props.id}-help`}
-          onFocus={handleFocus}
-          style={
-            showFeedback && meta.error ? { border: "1px solid red" } : null
-          }
+          onFocus={() => setDidFocus(true)}
+          className={`${
+            didFocus
+              ? meta.error || field.value.trim().length < 1
+                ? "invalid"
+                : "valid"
+              : ""
+          }`}
         />
       )}
-      {showFeedback ? (
-        <div
-          id={`${props.id}-feedback`}
-          aria-live="polite"
-          className="feedback text-sm"
-        >
-          {meta.error ? meta.error : "✓"}
-        </div>
-      ) : (
-        <text className="placeholderForm"> </text>
-      )}
+
+      <div
+        id={`${props.id}-feedback`}
+        aria-live="polite"
+        className={`feedback text-sm ${showFeedback ? "" : "hidden"}`}
+      >
+        {meta.error ? meta.error : "✓"}
+      </div>
+
       <div className="text-xs" id={`${props.id}-help`} tabIndex="-1">
         {helpText}
       </div>
