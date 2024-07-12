@@ -227,6 +227,7 @@ a:hover{
   font-family: 'Raleway', sans-serif;
   color: rgb(223, 223, 223);
   margin-block: 1rem 0;
+  text-align: center;
 }
 
 .card-title {
