@@ -3,22 +3,16 @@ import Project from "./Project";
 import { v4 } from "uuid";
 
 import interplanetaryAgeImg from "./../img/galactic-age.webp";
-import interplanetaryAgeImgGit from "./../img/git-cover3.jpg";
 
 import languageSuggesterImg from "./../img/suggester.webp";
-import languageSuggesterImgGit from "./../img/git-cover2.jpg";
 
 import neighborhoodImg from "./../img/neighbor.webp";
-import neighborhoodImgGit from "./../img/git-cover1.png";
 
 import currencyAgeImg from "./../img/currency.webp";
-import currencyAgeImgGit from "./../img/git-cover4.jpg";
 
 import rpgAgeImg from "./../img/rpg.webp";
-import rpgAgeImgGit from "./../img/git-cover5.png";
 
-import notemeImg from "./../img/noteme2.png";
-import notemeImgGit from "./../img/git-cover7.webp";
+import notemeImg from "./../img/noteme.png";
 
 import taskWaveImg from "./../img/TaskWave.png";
 
@@ -38,7 +32,6 @@ function ProjectList() {
               key={v4()}
               img={project.img}
               imgAlt={project.imgAlt}
-              imgGit={project.imgGit}
               description={project.description}
               gitRepo={project.gitRepo}
               technologies={project.technologies}
@@ -56,7 +49,6 @@ const mainProjectList = [
     projectName: "AI TaskWave",
     img: taskWaveImg,
     imgAlt: "Note Me App screenshot",
-    imgGit: notemeImgGit,
     description:
       "An iOS app designed with SwiftUI, leveraging advanced large language models (LLMs) to enhance productivity and task management. It generates content for emails, social media posts, reviews, and free-form entries using customizable templates sorted by frequency of use. The app supports voice input, history management, powerful search functionality, dark mode, and iCloud integration for seamless synchronization across devices. AI TaskWave integrates OpenAI’s ChatGPT model to streamline workflows and boost productivity.",
     gitRepo: "",
@@ -88,7 +80,6 @@ const mainProjectList = [
     projectName: "QuackWash",
     img: quackWashImg,
     imgAlt: "QuackWash web app screenshot",
-    imgGit: notemeImgGit,
     description:
       "Quack Wash is a responsive web application designed for a window cleaning service. The app includes animations and interactive elements to enhance user experience. The design uses the brand colors and incorporates a dark mode for better accessibility and user comfort.",
     gitRepo: "",
@@ -120,7 +111,6 @@ const mainProjectList = [
     projectName: "Note Me",
     img: notemeImg,
     imgAlt: "Note Me App screenshot",
-    imgGit: notemeImgGit,
     description:
       "A React Native application designed for efficient note-taking. It allows users to create, organize, and manage their notes with ease. The app features a clean and intuitive interface, providing functionalities such as adding new notes, editing existing ones, and categorizing notes for better organization.",
     gitRepo: "https://github.com/anton3ch/Note-Me-App",
@@ -143,12 +133,12 @@ const mainProjectList = [
       },
     ],
   },
+  ,
   // {
   //   deployedLink: "https://anton3ch.github.io/galactic-age/",
   //   projectName: "Interplanetary Age",
   //   img: interplanetaryAgeImg,
   //   imgAlt: "Interplanetary Age app screenshot",
-  //   imgGit: interplanetaryAgeImgGit,
   //   description:
   //     "The applications calculates what would user's age be on different planets based on solar years.",
   //   gitRepo: "https://github.com/anton3ch/galactic-age/",
@@ -176,7 +166,6 @@ const mainProjectList = [
     projectName: "Neighborhood",
     img: neighborhoodImg,
     imgAlt: "Neighborhood app screenshot",
-    imgGit: neighborhoodImgGit,
     description:
       "A robust neighborhood application that takes a user input and generates a range of numbers from 0 to the provided value with seamless substitutions. Implemented Jest unit testing for reliability and bug-free user experience.",
     gitRepo: "",
@@ -200,7 +189,6 @@ const mainProjectList = [
   //   projectName: "Language Suggester",
   //   img: languageSuggesterImg,
   //   imgAlt: "Language Suggester app screenshot",
-  //   imgGit: languageSuggesterImgGit,
   //   description:
   //     "The website presents a Programming Language Suggester quiz where the result changes based on the user input.",
   //   gitRepo: "https://github.com/anton3ch/language-suggester/",
@@ -224,7 +212,6 @@ const mainProjectList = [
     projectName: "Currency Exchange",
     img: currencyAgeImg,
     imgAlt: "Currency Exchanger app screenshot",
-    imgGit: currencyAgeImgGit,
     description:
       "Currency Exchanger queries ExchangeRate-API to convert currency between all available currency types. A user can type in an amount and then choose which currency it should be converted from and to.",
     gitRepo: "https://github.com/anton3ch/currency-exchange",
@@ -256,7 +243,6 @@ const mainProjectList = [
     projectName: "The Bug Slayer",
     img: rpgAgeImg,
     imgAlt: "The Bug Slayer app screenshot",
-    imgGit: rpgAgeImgGit,
     description:
       "Point-and-click game in which the player must use nothing but their mouse to find clues in order to complete the quest.",
     gitRepo: "https://github.com/anton3ch/slayer-rpg/",
@@ -287,7 +273,6 @@ const mainProjectList = [
 //     projectName: "The Bug Slayer",
 //     img: rpgAgeImg,
 //     imgAlt: "The Bug Slayer app screenshot",
-//     imgGit: rpgAgeImgGit,
 //     description:
 //       "Point-and-click game in which the player must use nothing but their mouse to find clues in order to complete the quest.",
 //     gitRepo: "https://github.com/anton3ch/slayer-rpg/",
@@ -315,7 +300,6 @@ const mainProjectList = [
 //     projectName: "",
 //     img: "",
 //     imgAlt: "Interplanetary Age app screenshot",
-//     imgGit: "",
 //     description: "",
 //     gitRepo: "",
 //     technologies: [
@@ -342,7 +326,6 @@ const mainProjectList = [
 //     projectName: "",
 //     img: "",
 //     imgAlt: "Interplanetary Age app screenshot",
-//     imgGit: "",
 //     description: "",
 //     gitRepo: "",
 //     technologies: [
