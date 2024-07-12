@@ -58,7 +58,7 @@ const mainProjectList = [
     imgAlt: "Note Me App screenshot",
     imgGit: notemeImgGit,
     description:
-      "An iOS app designed using SwiftUI that leverages large language models (LLMs) to enhance productivity and task management. It provides users with intelligent task generation and automated modifier prioritization, ensuring efficient and personalized task handling. With a focus on seamless user experience, AI TaskWave integrates advanced AI capabilities to streamline daily workflows and boost productivity.",
+      "An iOS app designed with SwiftUI, leveraging advanced large language models (LLMs) to enhance productivity and task management. It generates content for emails, social media posts, reviews, and free-form entries using customizable templates sorted by frequency of use. The app supports voice input, history management, powerful search functionality, dark mode, and iCloud integration for seamless synchronization across devices. AI TaskWave integrates OpenAI’s ChatGPT model to streamline workflows and boost productivity.",
     gitRepo: "",
     technologies: [
       {
