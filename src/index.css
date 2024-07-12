@@ -98,23 +98,6 @@ a {
   font-weight: 1000;
 }
 
-#myName {
-  background: -webkit-linear-gradient(rgb(150, 101, 241), rgb(228, 146, 255));
-  text-shadow: 5px 2px rgb(255, 255, 255);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 1000;
-}
-
-#myName:hover {
-  background: -webkit-linear-gradient(rgb(255, 29, 29), rgb(208, 69, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 1000;
-  
-}
-
-
 a:hover{
   text-decoration: none;
   background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
@@ -190,19 +173,7 @@ a:hover{
   padding-inline: 20px;
 }
 
-#intro h1 {
-  font-size: 4rem;
-  
-}
 
-#intro h2 {
-  font-size: 4.9rem;
-  
-}
-
-#intro2 {
-  font-size: 3.5rem !important;
-}
 
 
 .mePhotoContainer {
@@ -369,31 +340,7 @@ h5.card-text  {
   width: 40px;
 }
 
-/* Flickering animation */
 
-.intro {
-  display: flex;
-  justify-content: center;
-  color: rgb(255, 255, 255);
-  -webkit-animation-name: flash-txt;
-  animation-name: flash-txt;
-  -webkit-animation-duration: 5.5s;
-  animation-duration: 5.5s;
-  -webkit-animation-iteration-count: 2;
-  animation-iteration-count: 2;
-  animation-direction: normal;
-  /* border-radius: 10px; */
-  text-shadow: 2px 2px 18px rgb(4, 107, 252);
-
-}
-
-.innerIntro {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  max-width: 60%;
-  /* justify-content: flex-start; */
-}
 
 
 .projectContainer{
@@ -426,93 +373,6 @@ h5.card-text  {
     flex: 1 1 30%;
   }
 }
-
-  /* animation */
-  @keyframes flash-txt {
-    0% {
-      text-shadow: 2px 2px 18px rgb(0, 255, 81);
-      color: rgb(0, 0, 0);
-  }
-    18% {
-      text-shadow: 2px 2px 18px rgb(4, 107, 252);
-      color: white;
-    }
-    20% {
-      text-shadow: none;
-      color: white;
-    }
-    22% {
-      text-shadow: 2px 2px 18px rgb(252, 4, 231);
-      color: rgb(0, 0, 0);
-    }
-    24% {
-      text-shadow: none;
-      color: white;
-    }
-    25% {
-      text-shadow: 2px 2px 18px rgb(4, 252, 83);
-      color: white;
-    }
-    53% {
-      text-shadow: 2px 2px 18px rgb(4, 107, 252);
-      color: white;
-    }
-    55% {
-      text-shadow: none;
-      color: white;
-    }
-    57% {
-      text-shadow: 2px 2px 8px rgb(252, 4, 231);
-      color: rgb(0, 0, 0);
-    }
-    100% {
-      text-shadow: 2px 2px 8px rgb(4, 107, 252);
-      color: white;
-    }
-  } 
-  @-webkit-keyframes flash-txt {
-    0% {
-      text-shadow: 2px 2px 18px rgb(4, 252, 83);
-      color: white;
-  }
-    18% {
-      text-shadow: 2px 2px 18px rgb(4, 107, 252);
-      color: white;
-    }
-    20% {
-      text-shadow: none;
-      color: white;
-    }
-    22% {
-      text-shadow: 2px 2px 18px rgb(252, 4, 231);
-      color: white;
-    }
-    24% {
-      text-shadow: none;
-      color: white;
-    }
-    25% {
-      text-shadow: 2px 2px 18px rgb(4, 252, 83);
-      color: white;
-    }
-    53% {
-      text-shadow: 2px 2px 18px rgb(4, 107, 252);
-      color: white;
-    }
-    55% {
-      text-shadow: none;
-      color: white;
-    }
-    57% {
-      text-shadow: 2px 2px 8px rgb(252, 4, 231);
-      color: white;
-    }
-    100% {
-      text-shadow: 2px 2px 8px rgb(4, 107, 252);
-      color: white;
-    }
-  } 
-
 
   /* Animate */
 

@@ -143,34 +143,34 @@ const mainProjectList = [
       },
     ],
   },
-  {
-    deployedLink: "https://anton3ch.github.io/galactic-age/",
-    projectName: "Interplanetary Age",
-    img: interplanetaryAgeImg,
-    imgAlt: "Interplanetary Age app screenshot",
-    imgGit: interplanetaryAgeImgGit,
-    description:
-      "The applications calculates what would user's age be on different planets based on solar years.",
-    gitRepo: "https://github.com/anton3ch/galactic-age/",
-    technologies: [
-      {
-        name: "HTML",
-        link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
-      },
-      {
-        name: "CSS",
-        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      },
-      {
-        name: "JavaScript",
-        link: "https://www.javascript.com",
-      },
-      {
-        name: "Webpack",
-        link: "https://webpack.js.org",
-      },
-    ],
-  },
+  // {
+  //   deployedLink: "https://anton3ch.github.io/galactic-age/",
+  //   projectName: "Interplanetary Age",
+  //   img: interplanetaryAgeImg,
+  //   imgAlt: "Interplanetary Age app screenshot",
+  //   imgGit: interplanetaryAgeImgGit,
+  //   description:
+  //     "The applications calculates what would user's age be on different planets based on solar years.",
+  //   gitRepo: "https://github.com/anton3ch/galactic-age/",
+  //   technologies: [
+  //     {
+  //       name: "HTML",
+  //       link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+  //     },
+  //     {
+  //       name: "CSS",
+  //       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  //     },
+  //     {
+  //       name: "JavaScript",
+  //       link: "https://www.javascript.com",
+  //     },
+  //     {
+  //       name: "Webpack",
+  //       link: "https://webpack.js.org",
+  //     },
+  //   ],
+  // },
   {
     deployedLink: "https://anton3ch.github.io/neighbor/",
     projectName: "Neighborhood",
@@ -195,30 +195,30 @@ const mainProjectList = [
       },
     ],
   },
-  {
-    deployedLink: "https://anton3ch.github.io/language-suggester/",
-    projectName: "Language Suggester",
-    img: languageSuggesterImg,
-    imgAlt: "Language Suggester app screenshot",
-    imgGit: languageSuggesterImgGit,
-    description:
-      "The website presents a Programming Language Suggester quiz where the result changes based on the user input.",
-    gitRepo: "https://github.com/anton3ch/language-suggester/",
-    technologies: [
-      {
-        name: "HTML",
-        link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
-      },
-      {
-        name: "CSS",
-        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      },
-      {
-        name: "JavaScript",
-        link: "https://www.javascript.com",
-      },
-    ],
-  },
+  // {
+  //   deployedLink: "https://anton3ch.github.io/language-suggester/",
+  //   projectName: "Language Suggester",
+  //   img: languageSuggesterImg,
+  //   imgAlt: "Language Suggester app screenshot",
+  //   imgGit: languageSuggesterImgGit,
+  //   description:
+  //     "The website presents a Programming Language Suggester quiz where the result changes based on the user input.",
+  //   gitRepo: "https://github.com/anton3ch/language-suggester/",
+  //   technologies: [
+  //     {
+  //       name: "HTML",
+  //       link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+  //     },
+  //     {
+  //       name: "CSS",
+  //       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  //     },
+  //     {
+  //       name: "JavaScript",
+  //       link: "https://www.javascript.com",
+  //     },
+  //   ],
+  // },
   {
     deployedLink: "https://anton3ch.github.io/currency-exchange",
     projectName: "Currency Exchange",
