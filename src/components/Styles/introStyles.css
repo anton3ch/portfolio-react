@@ -168,23 +168,25 @@
 .bubble {
   position: absolute;
   border-radius: 50%;
+  left: 45%;
   padding: 20px 30px;
   color: rgba(255, 255, 255, 0.628);
   font-size: 1rem;
   white-space: nowrap;
   background: radial-gradient(ellipse at center, rgba(135, 36, 255, 0.156) 0%, rgba(228, 146, 255, 0) 80%);
-  animation: float-right 5s infinite ease-in-out;
+  animation: float-right 5s infinite linear;
+  
   opacity: 0;
 }
 
 .bubble:nth-child(odd) {
-  animation: float-left 5s infinite ease-in-out;
+  animation: float-left 5s infinite linear;
 }
 
 @keyframes float-right {
   0% {
-    transform: translateX(-40vw); /* Start off-screen to the left */
-    opacity: 0; /* Start hidden */
+    transform: translateX(-55vw);
+    opacity: 0;
   }
   10% {
     opacity: 1; /* Fade in */
@@ -193,15 +195,15 @@
     opacity: 1; /* Stay visible */
   }
   100% {
-    transform: translateX(calc(110vw)); /* Move off-screen to the right */
-    opacity: 0; /* Fade out */
+    transform: translateX(55vw); 
+    opacity: 0;
   }
 }
 
 @keyframes float-left {
   0% {
-    transform: translateX(100vw); /* Start off-screen to the right */
-    opacity: 0; /* Start hidden */
+    transform: translateX(55vw);
+    /* opacity: 0; */
   }
   10% {
     opacity: 1; /* Fade in */
@@ -210,7 +212,7 @@
     opacity: 1; /* Stay visible */
   }
   100% {
-    transform: translateX(calc(-50vw)); /* Move off-screen to the left */
-    opacity: 0; /* Fade out */
+    transform: translateX(calc(-55vw));
+    /* opacity: 0; */
   }
 }

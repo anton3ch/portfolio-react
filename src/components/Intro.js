@@ -80,7 +80,7 @@ function Intro() {
               index % 2 === 0 ? "float-right" : "float-left"
             }`}
             style={{
-              top: `${getRandomPosition(90)}%`,
+              top: `${(90 / skills.length) * index}%`,
               animationDelay: `${getRandomPosition(10)}s`,
               animationDuration: `${
                 getAnimationDuration() +
