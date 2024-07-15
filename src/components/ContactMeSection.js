@@ -147,7 +147,7 @@ const LandingSection = () => {
             errorMessage ? (
               <div
                 className="formError"
-                style={{ height: `${containerHeight}px` }}
+                style={{ minHeight: `${containerHeight}px` }}
               >
                 <div className="errorIcon">😖</div>
                 <h3>Yikes! An error occurred.</h3>
@@ -166,7 +166,7 @@ const LandingSection = () => {
             ) : (
               <div
                 className="formSuccess"
-                style={{ height: `${containerHeight}px` }}
+                style={{ minHeight: `${containerHeight}px` }}
               >
                 <h3 className="thankYouMessage">Thank You!</h3>
                 <div className="successMessage">
@@ -184,7 +184,10 @@ const LandingSection = () => {
               </div>
             )
           ) : isLoading ? (
-            <div className="loading" style={{ height: `${containerHeight}px` }}>
+            <div
+              className="loading"
+              style={{ minHeight: `${containerHeight}px` }}
+            >
               <div className="spinner"></div>
             </div>
           ) : (
