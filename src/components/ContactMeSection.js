@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useFormik, FormikProvider, Form, useField } from "formik";
 // import "./../index.css";
 import "./Styles/contactMeStyles.css"; // Import the new CSS file
@@ -79,6 +79,15 @@ const LandingSection = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [containerHeight, setContainerHeight] = useState(0);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      setContainerHeight(containerRef.current.offsetHeight);
+      console.log("height", containerRef.current.offsetHeight);
+    }
+  }, []);
 
   const formik = useFormik({
     initialValues: {
@@ -92,7 +101,7 @@ const LandingSection = () => {
       await sleep(500);
 
       try {
-        const response = await fetch("https://api.web3forms.com/submit", {
+        const response = await fetch("https://api.web3forms.com/submit-ss", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -136,7 +145,10 @@ const LandingSection = () => {
         <div className="card cardForm">
           {formSubmitted ? (
             errorMessage ? (
-              <div className="formError">
+              <div
+                className="formError"
+                style={{ height: `${containerHeight}px` }}
+              >
                 <div className="errorIcon">😖</div>
                 <h3>Yikes! An error occurred.</h3>
                 <h4>Error: {errorMessage}</h4>
@@ -152,7 +164,10 @@ const LandingSection = () => {
                 </button>
               </div>
             ) : (
-              <div className="formSuccess">
+              <div
+                className="formSuccess"
+                style={{ height: `${containerHeight}px` }}
+              >
                 <h3 className="thankYouMessage">Thank You!</h3>
                 <div className="successMessage">
                   <div className="checkmark">✓</div>
@@ -169,11 +184,11 @@ const LandingSection = () => {
               </div>
             )
           ) : isLoading ? (
-            <div className="loading">
+            <div className="loading" style={{ height: `${containerHeight}px` }}>
               <div className="spinner"></div>
             </div>
           ) : (
-            <Form className="formBody">
+            <Form className="formBody" ref={containerRef}>
               <TextInputLiveFeedback
                 label="Name"
                 id="name"
