@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Parisienne&family=Pacifico&family=Satisfy&family=Alex+Brush&family=Allura&family=Yellowtail&family=Rouge+Script&family=Amatic+SC&display=swap");
 /* Flickering animation */
 /* .outerBox {
   width: 100%;
@@ -204,45 +205,12 @@
   backdrop-filter: blur(2px);
 }
 
-/* New frothy floating background with rounded corners and margin */
-.intro-frothy-background {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-
-  /* box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.2),
-    0 4px 15px rgba(0, 0, 0, 0.2); */
-  border-radius: 15px;
-  /* background: rgba(255, 255, 255, 0.2); */
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  animation: float 6s ease-in-out infinite;
-  z-index: 0;
-}
-
-/* Keyframes for gentle floating (up-and-down) animation */
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 /* Bubble animations remain unchanged */
 
 .bubbles {
   position: absolute;
   width: 100%;
-  height: 85%;
+  height: 95%;
   pointer-events: none; /* Prevent the bubbles from interfering with interactions */
   z-index: 1;
 }
@@ -252,17 +220,18 @@
   border-radius: 50%;
   left: 45%;
   padding: 20px 30px;
-  color: rgba(255, 255, 255, 0.628);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1rem;
   white-space: nowrap;
-  background: radial-gradient(
+  /* background: radial-gradient(
     ellipse at center,
     rgba(0, 42, 255, 0.09) 0%,
     rgba(191, 0, 255, 0) 60%
-  );
+  ); */
   /* backdrop-filter: blur(5px); */
   animation: float-right 5s infinite linear;
   opacity: 0;
+  z-index: 10 !important;
 }
 
 /* .bubble-bg {

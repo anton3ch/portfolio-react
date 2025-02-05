@@ -38,6 +38,19 @@ const skills = [
   "Adobe Photoshop",
   "Adobe Lightroom",
 ];
+// Add this array at the top of your component file (e.g., right after the imports)
+const calligraphyFonts = [
+  "'Dancing Script', cursive",
+  "'Great Vibes', cursive",
+  "'Parisienne', cursive",
+  "'Pacifico', cursive",
+  "'Satisfy', cursive",
+  "'Alex Brush', cursive",
+  "'Allura', cursive",
+  "'Yellowtail', cursive",
+  "'Rouge Script', cursive",
+  "'Amatic SC', cursive",
+];
 
 function getRandomPosition(max) {
   return Math.floor(Math.random() * max);
@@ -101,25 +114,31 @@ function Intro() {
         style={{ height: outerBoxHeight }}
       ></div>
       <div className="bubbles">
-        {skills.map((skill, index) => (
-          <div
-            key={index}
-            className={`bubble ${
-              index % 2 === 0 ? "float-right" : "float-left"
-            }`}
-            style={{
-              top: `${(90 / skills.length) * index}%`,
-              animationDelay: `${getRandomPosition(10)}s`,
-              animationDuration: `${
-                getAnimationDuration() +
-                getRandomPosition(getAnimationDuration())
-              }s`,
-            }}
-          >
-            {/* <div className="bubble-bg">{skill}</div> */}
-            {skill}
-          </div>
-        ))}
+        {skills.map((skill, index) => {
+          const randomFont =
+            calligraphyFonts[getRandomPosition(calligraphyFonts.length)];
+          return (
+            <div
+              key={index}
+              className={`bubble ${
+                index % 2 === 0 ? "float-right" : "float-left"
+              }`}
+              style={{
+                top: `${(90 / skills.length) * index}%`,
+                animationDelay: `${getRandomPosition(10)}s`,
+                animationDuration: `${
+                  getAnimationDuration() +
+                  getRandomPosition(getAnimationDuration())
+                }s`,
+                fontFamily: calligraphyFonts[index % calligraphyFonts.length],
+                // Optionally, you can also add a font-style: italic for some fonts if desired:
+                // fontStyle: Math.random() > 0.5 ? "italic" : "normal",
+              }}
+            >
+              {skill}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
