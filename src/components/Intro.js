@@ -43,7 +43,7 @@ const calligraphyFonts = [
   "'Dancing Script', cursive",
   "'Great Vibes', cursive",
   "'Parisienne', cursive",
-  "'Pacifico', cursive",
+  // "'Pacifico', cursive",
   "'Satisfy', cursive",
   "'Alex Brush', cursive",
   "'Allura', cursive",
