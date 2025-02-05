@@ -35,11 +35,11 @@
 }
 
 #intro h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 #intro h2 {
-  font-size: 4.9rem;
+  font-size: 3.9rem;
 }
 
 #intro2 {
@@ -49,7 +49,7 @@
   width: auto; */
   /* max-width: fit-content;
   min-width: min-content; */
-  font-size: 3.5rem !important;
+  font-size: 2.9rem !important;
   margin-block: 2vh;
   padding-bottom: 2vh;
 }
