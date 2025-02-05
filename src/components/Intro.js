@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Styles/introStyles.css"; // Your existing intro styles
 import FrothyBackground from "./FrothyBackground";
+import { Container } from "@mui/material";
 
 const skills = [
   "JavaScript",
@@ -54,10 +55,23 @@ function getAnimationDuration() {
 }
 
 function Intro() {
+  const outerBoxRef = useRef(null);
+  const [outerBoxHeight, setOuterBoxHeight] = useState(0);
+
+  useEffect(() => {
+    if (outerBoxRef.current) {
+      setOuterBoxHeight(outerBoxRef.current.clientHeight);
+    }
+  }, []);
+
   return (
-    <div className="outerBox">
+    <div className="outerBox" ref={outerBoxRef}>
       <div
-        className="jumbotron m-8  ps-0 pb-0 intro mx-3"
+        className="outerBoxLeftBlur"
+        style={{ height: outerBoxHeight }}
+      ></div>
+      <Container
+        className="jumbotron intro"
         id="intro"
         // style={{ position: "relative", overflow: "hidden" }}
       >
@@ -81,7 +95,11 @@ function Intro() {
           </div>
           <h2 id="intro2">Full-Stack Software Engineer</h2>
         </div>
-      </div>
+      </Container>
+      <div
+        className="outerBoxRightBlur"
+        style={{ height: outerBoxHeight }}
+      ></div>
       <div className="bubbles">
         {skills.map((skill, index) => (
           <div
@@ -98,7 +116,7 @@ function Intro() {
               }s`,
             }}
           >
-            <div className="bubble-bg">{skill}</div>
+            {/* <div className="bubble-bg">{skill}</div> */}
             {skill}
           </div>
         ))}

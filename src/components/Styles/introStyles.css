@@ -1,14 +1,16 @@
 /* Flickering animation */
-.outerBox {
+/* .outerBox {
   width: 100%;
   position: relative;
-  padding: 2rem 3rem 0 3rem;
+  padding: 2vh 3vh 0 3vh;
   display: flex;
   justify-content: center;
-}
+} */
 .intro {
   display: flex;
   justify-content: center;
+  /* padding: 0 !important; */
+
   color: rgb(255, 255, 255);
   animation: flash-txt 8.5s linear 0s, flash-txt 8.5s linear 11s infinite; /* Run immediately and then after a delay */
   text-shadow: 2px 2px 18px rgb(4, 107, 252);
@@ -18,6 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* max-width: min-content; */
   /* flex-wrap: wrap-reverse; */
   /* max-width: 60%; */
   /* padding-block: 8vh; */
@@ -161,39 +164,42 @@
 /* Main container styles */
 .jumbotron {
   position: relative; /* So that absolutely positioned children are relative to this */
-  overflow: hidden;
-  width: 100%;
+  overflow-y: visible;
   background: transparent; /* Transparent background so the frothy layer shows */
 }
 .outerBox {
   position: relative;
   display: flex;
+  padding-top: 20px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  /* justify-items: center;
   align-items: center;
-  justify-content: center;
-  overflow: clip; /* Allow bubbles to extend outside */
-  width: 100%; /* Use full width */
+  justify-content: center; */
+  /* gap: 0; */
+  width: 100%;
+  height: 100%;
   background: transparent;
 }
 
-.outerBox::before,
-.outerBox::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 3.5rem; /* Adjust width for the blurred edge */
-  height: 100%;
+/* These two elements will expand to fill the remaining space on the left and right */
+.outerBoxLeftBlur,
+.outerBoxRightBlur {
+  flex-grow: 1;
+  height: 400px;
   pointer-events: none;
   z-index: 2;
+  min-width: 24px;
 }
 
-.outerBox::before {
-  left: 0;
+/* Left blur: gradient from opaque at the edge to transparent inward */
+.outerBoxLeftBlur {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), transparent);
   backdrop-filter: blur(2px);
 }
 
-.outerBox::after {
-  right: 0;
+/* Right blur: gradient from opaque at the edge to transparent inward */
+.outerBoxRightBlur {
   background: linear-gradient(to left, rgba(255, 255, 255, 0), transparent);
   backdrop-filter: blur(2px);
 }
@@ -201,18 +207,19 @@
 /* New frothy floating background with rounded corners and margin */
 .intro-frothy-background {
   position: absolute;
-  top: 8px;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  /* box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.2),
+    0 4px 15px rgba(0, 0, 0, 0.2); */
   border-radius: 15px;
   /* background: rgba(255, 255, 255, 0.2); */
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
   border-radius: 20px;
-  /* box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.2),
-    0 4px 15px rgba(0, 0, 0, 0.2); */
   animation: float 6s ease-in-out infinite;
   z-index: 0;
 }
@@ -244,20 +251,21 @@
   position: absolute;
   border-radius: 50%;
   left: 45%;
-  /* padding: 20px 30px; */
+  padding: 20px 30px;
   color: rgba(255, 255, 255, 0.628);
   font-size: 1rem;
   white-space: nowrap;
-  /* background: radial-gradient(
+  background: radial-gradient(
     ellipse at center,
-    rgba(135, 36, 255, 0.156) 0%,
-    rgba(228, 146, 255, 0) 80%
-  ); */
+    rgba(0, 42, 255, 0.09) 0%,
+    rgba(191, 0, 255, 0) 60%
+  );
+  /* backdrop-filter: blur(5px); */
   animation: float-right 5s infinite linear;
   opacity: 0;
 }
 
-.bubble-bg {
+/* .bubble-bg {
   position: absolute;
   border-radius: 50%;
   left: -30px;
@@ -272,16 +280,16 @@
     rgba(228, 146, 255, 0) 80%
   );
   filter: blur(15px);
-}
+} */
 
 .bubble:nth-child(odd) {
   animation: float-left 5s infinite linear;
 }
 
 @keyframes float-right {
-  9% {
+  0% {
     transform: translateX(-55vw);
-    opacity: 0;
+    /* opacity: 0; */
   }
   10% {
     opacity: 1;
@@ -289,16 +297,16 @@
   90% {
     opacity: 1;
   }
-  91% {
+  100% {
     transform: translateX(55vw);
-    opacity: 0;
+    /* opacity: 0; */
   }
 }
 
 @keyframes float-left {
-  9% {
+  0% {
     transform: translateX(55vw);
-    opacity: 0;
+    /* opacity: 0; */
   }
   10% {
     opacity: 1;
@@ -306,11 +314,8 @@
   90% {
     opacity: 1;
   }
-  91% {
-    opacity: 1;
-  }
   100% {
     transform: translateX(-55vw);
-    opacity: 0;
+    /* opacity: 0; */
   }
 }

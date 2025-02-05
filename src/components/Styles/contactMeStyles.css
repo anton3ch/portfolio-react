@@ -98,7 +98,8 @@
   visibility: hidden;
 }
 
-input, textarea {
+input,
+textarea {
   background-color: #333;
   color: #fff; /* Text color */
   border: 1px solid #555; /* Default border color */
@@ -107,30 +108,35 @@ input, textarea {
   outline: #ccc;
 }
 
-input.valid, textarea.valid {
+input.valid,
+textarea.valid {
   border-color: #00ff33;
   box-shadow: 0 0 5px rgba(0, 255, 51, 0.5); /* Green border and shadow for valid state */
 }
 
-input.invalid, textarea.invalid {
+input.invalid,
+textarea.invalid {
   border-color: red;
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Red border and shadow for invalid state */
 }
 
 /* Apply hover effect to both input and textarea, ensuring the border color does not change */
 
-input.valid:hover, textarea.valid:hover {
+input.valid:hover,
+textarea.valid:hover {
   border-color: #00ff33;
   background-color: #464545; /* Inherit box shadow */
 }
 
-input.invalid:hover, textarea.invalid:hover {
+input.invalid:hover,
+textarea.invalid:hover {
   border-color: red;
   background-color: #464545; /* Inherit box shadow */
 }
 
 /* Style placeholder text for both input and textarea */
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #ccc; /* Placeholder text color */
 }
 
@@ -148,12 +154,12 @@ label {
   color: red;
 }
 
-.formError h3, h4 {
+.formError h3,
+h4 {
   margin: 0;
-  
+
   text-align: center;
 }
-
 
 .formError h4 {
   margin-top: 0.5rem;
@@ -163,4 +169,130 @@ label {
 .errorIcon {
   font-size: 2rem;
   color: red;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardForm {
+  display: flex;
+  /* justify-content: center;
+  align-items: center;  */
+  width: 100%;
+  padding: 2rem;
+}
+
+.formBody {
+  display: flex;
+  width: 100%;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  padding: 0;
+}
+
+.formBody > * {
+  margin: 10px;
+}
+
+.formElement {
+  text-align: center;
+}
+
+.formComment {
+  min-width: 60%;
+  min-height: 100px;
+}
+
+.feedback {
+  color: rgb(255, 0, 0);
+}
+
+.text-sm {
+  font-size: 0.7rem;
+}
+
+.placeholderForm {
+  display: block;
+  box-sizing: content-box;
+  height: 0.8rem;
+}
+
+.formButton {
+  background-color: #d9d9d923 !important; /* Light grey background */
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  box-shadow: rgba(90, 90, 90, 0.5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #ffffff !important; /* Dark grey text color */
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+  align-self: center;
+}
+
+.formButton:hover {
+  background-color: #ffffff5f !important; /* Lighter grey on hover */
+  color: #4b4949cb !important; /* Dark grey text color */
+}
+
+.formButton:active {
+  border-color: #59595939; /* Dark grey border on focus */
+  box-shadow: rgba(92, 92, 92, 0.5) 0 2px 5px 0;
+  outline: 0;
+  transform: scale(0.95);
+}
+
+input,
+textarea {
+  background-color: #33333327 !important;
+  color: #fff; /* Text color */
+  border: 1px solid #555; /* Border color */
+  padding: 10px; /* Adjust padding as needed */
+  border-radius: 4px; /* Optional: Rounded corners */
+  outline: #ccc;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00ff33;
+  box-shadow: 0 0 5px rgba(204, 204, 204, 0.5); /* Optional: Add a subtle box shadow */
+}
+
+/* Style placeholder text for both input and textarea */
+input::placeholder,
+textarea::placeholder {
+  color: #ccc; /* Placeholder text color */
+}
+
+/* Apply hover effect to both input and textarea */
+input:hover,
+textarea:hover {
+  border-color: #7777775d; /* Adjust hover border color as needed */
+}
+
+label {
+  display: block; /* Make labels block-level elements */
+  margin-bottom: 5px; /* Add spacing between label and input field */
+}
+label {
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3),
+    1px 1px 1px rgba(0, 0, 0, 0.3);
 }
