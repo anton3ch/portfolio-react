@@ -1,0 +1,51 @@
+.frothy-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Adjust the height as needed (here 150px covers the top area) */
+  height: 100%;
+  pointer-events: none; /* So that it does not block clicks */
+  overflow: hidden;
+  z-index: 1; /* Adjust layering as needed */
+}
+
+.frothy-overlay {
+  position: absolute;
+  /* Make it slightly larger than the container so that rotation/animation does not reveal gaps */
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.5),
+    0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: frothAnim 5s ease-in-out infinite;
+}
+
+/* Pseudo-element to add a bottom shadow */
+.frothy-overlay::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px; /* Adjust height for shadow intensity */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@keyframes frothAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,5 +1,11 @@
 /* Flickering animation */
-
+.outerBox {
+  width: 100%;
+  position: relative;
+  padding: 2rem 3rem 0 3rem;
+  display: flex;
+  justify-content: center;
+}
 .intro {
   display: flex;
   justify-content: center;
@@ -9,11 +15,12 @@
 }
 
 .innerIntro {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center;
+  /* flex-wrap: wrap-reverse; */
   /* max-width: 60%; */
-  padding-block: 8vh;
+  /* padding-block: 8vh; */
   z-index: 2;
   /* justify-content: flex-start; */
 }
@@ -29,17 +36,22 @@
 
 #intro h1 {
   font-size: 4rem;
-  
 }
 
 #intro h2 {
   font-size: 4.9rem;
-  
 }
 
 #intro2 {
+  /* display: flex;
+  flex-wrap: wrap;
+  text-wrap: wrap;
+  width: auto; */
+  /* max-width: fit-content;
+  min-width: min-content; */
   font-size: 3.5rem !important;
   margin-block: 2vh;
+  padding-bottom: 2vh;
 }
 
 #myName {
@@ -57,111 +69,174 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 1000;
-  
 }
 
-
-  /* animation */
-  @keyframes flash-txt {
-    0% {
-      text-shadow: 2px 2px 18px rgb(0, 255, 81);
-      color: rgb(0, 0, 0);
+/* Flickering animation keyframes */
+@keyframes flash-txt {
+  0% {
+    text-shadow: 2px 2px 18px rgb(0, 255, 81);
+    /* color: rgb(0, 0, 0); */
   }
-    18% {
-      text-shadow: 2px 2px 18px rgb(4, 107, 252);
-      color: white;
-    }
-    20% {
-      text-shadow: none;
-      color: white;
-    }
-    22% {
-      text-shadow: 2px 2px 18px rgb(252, 4, 231);
-      color: rgb(0, 0, 0);
-    }
-    24% {
-      text-shadow: none;
-      color: white;
-    }
-    25% {
-      text-shadow: 2px 2px 18px rgb(4, 252, 83);
-      color: white;
-    }
-    53% {
-      text-shadow: 2px 2px 18px rgb(4, 107, 252);
-      color: white;
-    }
-    55% {
-      text-shadow: none;
-      color: white;
-    }
-    57% {
-      text-shadow: 2px 2px 8px rgb(252, 4, 231);
-      color: rgb(0, 0, 0);
-    }
-    100% {
-      text-shadow: 2px 2px 8px rgb(4, 107, 252);
-      color: white;
-    }
-  } 
-  @-webkit-keyframes flash-txt {
-    0% {
-      text-shadow: 2px 2px 18px rgb(4, 252, 83);
-      color: white;
+  18% {
+    text-shadow: 2px 2px 18px rgb(4, 107, 252);
+    color: white;
   }
-    18% {
-      text-shadow: 2px 2px 18px rgb(4, 107, 252);
-      color: white;
-    }
-    20% {
-      text-shadow: none;
-      color: white;
-    }
-    22% {
-      text-shadow: 2px 2px 18px rgb(252, 4, 231);
-      color: white;
-    }
-    24% {
-      text-shadow: none;
-      color: white;
-    }
-    25% {
-      text-shadow: 2px 2px 18px rgb(4, 252, 83);
-      color: white;
-    }
-    53% {
-      text-shadow: 2px 2px 18px rgb(4, 107, 252);
-      color: white;
-    }
-    55% {
-      text-shadow: none;
-      color: white;
-    }
-    57% {
-      text-shadow: 2px 2px 8px rgb(252, 4, 231);
-      color: white;
-    }
-    100% {
-      text-shadow: 2px 2px 8px rgb(4, 107, 252);
-      color: white;
-    }
-  } 
+  20% {
+    text-shadow: none;
+    color: white;
+  }
+  22% {
+    text-shadow: 2px 2px 18px rgb(252, 4, 231);
+    /* color: rgb(0, 0, 0); */
+  }
+  24% {
+    text-shadow: none;
+    color: white;
+  }
+  25% {
+    text-shadow: 2px 2px 18px rgb(4, 252, 83);
+    color: white;
+  }
+  53% {
+    text-shadow: 2px 2px 18px rgb(4, 107, 252);
+    color: white;
+  }
+  55% {
+    text-shadow: none;
+    color: white;
+  }
+  57% {
+    text-shadow: 2px 2px 8px rgb(252, 4, 231);
+    /* color: rgb(0, 0, 0); */
+  }
+  100% {
+    text-shadow: 2px 2px 8px rgb(4, 107, 252);
+    color: white;
+  }
+}
 
+@-webkit-keyframes flash-txt {
+  0% {
+    text-shadow: 2px 2px 18px rgb(4, 252, 83);
+    color: white;
+  }
+  18% {
+    text-shadow: 2px 2px 18px rgb(4, 107, 252);
+    color: white;
+  }
+  20% {
+    text-shadow: none;
+    color: white;
+  }
+  22% {
+    text-shadow: 2px 2px 18px rgb(252, 4, 231);
+    color: white;
+  }
+  24% {
+    text-shadow: none;
+    color: white;
+  }
+  25% {
+    text-shadow: 2px 2px 18px rgb(4, 252, 83);
+    color: white;
+  }
+  53% {
+    text-shadow: 2px 2px 18px rgb(4, 107, 252);
+    color: white;
+  }
+  55% {
+    text-shadow: none;
+    color: white;
+  }
+  57% {
+    text-shadow: 2px 2px 8px rgb(252, 4, 231);
+    color: white;
+  }
+  100% {
+    text-shadow: 2px 2px 8px rgb(4, 107, 252);
+    color: white;
+  }
+}
 
-
-/* Add these styles to your existing CSS or create a new CSS file */
-
+/* Main container styles */
 .jumbotron {
-  position: relative;
+  position: relative; /* So that absolutely positioned children are relative to this */
   overflow: hidden;
-  background: #000; /* Change as needed for contrast */
+  width: 100%;
+  background: transparent; /* Transparent background so the frothy layer shows */
 }
+.outerBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: clip; /* Allow bubbles to extend outside */
+  width: 100%; /* Use full width */
+  background: transparent;
+}
+
+.outerBox::before,
+.outerBox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 3.5rem; /* Adjust width for the blurred edge */
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.outerBox::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), transparent);
+  backdrop-filter: blur(2px);
+}
+
+.outerBox::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), transparent);
+  backdrop-filter: blur(2px);
+}
+
+/* New frothy floating background with rounded corners and margin */
+.intro-frothy-background {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border-radius: 15px;
+  /* background: rgba(255, 255, 255, 0.2); */
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  /* box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.2),
+    0 4px 15px rgba(0, 0, 0, 0.2); */
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* Keyframes for gentle floating (up-and-down) animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Bubble animations remain unchanged */
 
 .bubbles {
   position: absolute;
   width: 100%;
-  height: 100%;
-  pointer-events: none; /* Prevent the bubbles from interfering with other interactions */
+  height: 85%;
+  pointer-events: none; /* Prevent the bubbles from interfering with interactions */
   z-index: 1;
 }
 
@@ -169,14 +244,34 @@
   position: absolute;
   border-radius: 50%;
   left: 45%;
-  padding: 20px 30px;
+  /* padding: 20px 30px; */
   color: rgba(255, 255, 255, 0.628);
   font-size: 1rem;
   white-space: nowrap;
-  background: radial-gradient(ellipse at center, rgba(135, 36, 255, 0.156) 0%, rgba(228, 146, 255, 0) 80%);
+  /* background: radial-gradient(
+    ellipse at center,
+    rgba(135, 36, 255, 0.156) 0%,
+    rgba(228, 146, 255, 0) 80%
+  ); */
   animation: float-right 5s infinite linear;
-  
   opacity: 0;
+}
+
+.bubble-bg {
+  position: absolute;
+  border-radius: 50%;
+  left: -30px;
+  top: -20px;
+  padding: 20px 30px;
+  color: rgba(255, 255, 255, 0);
+  font-size: 1rem;
+  white-space: nowrap;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(138, 36, 255, 0.156) 0%,
+    rgba(228, 146, 255, 0) 80%
+  );
+  filter: blur(15px);
 }
 
 .bubble:nth-child(odd) {
@@ -184,35 +279,38 @@
 }
 
 @keyframes float-right {
-  0% {
+  9% {
     transform: translateX(-55vw);
     opacity: 0;
   }
   10% {
-    opacity: 1; /* Fade in */
+    opacity: 1;
   }
   90% {
-    opacity: 1; /* Stay visible */
+    opacity: 1;
   }
-  100% {
-    transform: translateX(55vw); 
+  91% {
+    transform: translateX(55vw);
     opacity: 0;
   }
 }
 
 @keyframes float-left {
-  0% {
+  9% {
     transform: translateX(55vw);
-    /* opacity: 0; */
+    opacity: 0;
   }
   10% {
-    opacity: 1; /* Fade in */
+    opacity: 1;
   }
   90% {
-    opacity: 1; /* Stay visible */
+    opacity: 1;
+  }
+  91% {
+    opacity: 1;
   }
   100% {
-    transform: translateX(calc(-55vw));
-    /* opacity: 0; */
+    transform: translateX(-55vw);
+    opacity: 0;
   }
 }

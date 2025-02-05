@@ -1,16 +1,47 @@
-@import 'animate.css';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+@import "animate.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Import HyperBlobOutline */
+@font-face {
+  font-family: "HyperBlobOutline";
+  src: local("HyperBlobOutline"),
+    url("./fonts/HyperBlobOutline-OVj6o.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Import MekkoOutline */
+@font-face {
+  font-family: "MekkoOutline";
+  src: local("MekkoOutline"),
+    url("./fonts/MekkoOutline-ovXOB.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Import Chibolddemo */
+@font-face {
+  font-family: "Chibolddemo";
+  src: local("Chibolddemo"),
+    url("./fonts/Chibolddemo-1GD7g.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff00 !important;
+}
+html {
+  background-color: #ffffff00 !important;
 }
 
 .text-justify {
@@ -18,14 +49,13 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 #root {
-
   /* background: rgb(255, 255, 255); */
-  background:rgb(0, 0, 0);
+  background: rgba(255, 255, 255, 0.084);
   width: 100%;
 
   margin: 0;
@@ -33,34 +63,36 @@ code {
 }
 
 footer-bg {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .footer-text {
-  margin: 10px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  padding: 10px;
   color: #dadada;
 }
 
-  /* Previous */
+/* Previous */
 
-.outer-box{
-    background-color: rgba(106, 91, 91, 0.373);
-    width: 100% !important;
-    margin: 0;
-    padding: 0;
-    /* display: flex; */
-    justify-content: center;
-    
+.outer-box {
+  /* background-color: rgba(106, 91, 91, 0.373); */
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  justify-content: center;
 }
 .container {
   /* max-width: 1200px !important; */
   /* filter: blur(8px); */
 
   position: relative;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   /* padding-top: 1rem; */
   border-radius: 10px;
 }
@@ -73,7 +105,6 @@ footer-bg {
   #root {
     padding: 0;
   }
-
 }
 
 /* Anchors */
@@ -83,11 +114,26 @@ footer-bg {
   color: white;
 }
 
+p {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.15),
+    1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
 a {
-  background: -webkit-linear-gradient(rgb(255, 194, 194), rgb(184, 173, 255));
-  /* text-shadow: 1px 1px rgb(255, 255, 255); */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* background: -webkit-linear-gradient(
+    rgb(255, 250, 250),
+    rgba(255, 255, 255, 0.566)
+  ); */
+  color: rgba(255, 255, 255, 0.9);
+  /* 3D text effect using multiple text shadows */
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4),
+    /* subtle inner shadow */ 2px 2px 0px rgba(0, 0, 0, 0.1),
+    3px 3px 0px rgba(0, 0, 0, 0.1), 1px 1px 0px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  /* text-shadow: 1px 1px rgba(145, 145, 145, 0.325); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
   font-weight: 1000;
 }
 
@@ -98,13 +144,24 @@ a {
   font-weight: 1000;
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
-  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+  /* background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: rgb(255, 255, 255);
+  /* 3D text effect using multiple text shadows */
+  text-shadow: 1px 1px 0px rgba(255, 0, 0, 0.2),
+    /* subtle inner shadow */ 2px 2px 0px rgba(17, 0, 255, 0.2),
+    3px 3px 0px rgba(255, 0, 0, 0.2), 4px 4px 0px rgba(255, 0, 0, 0.2);
   font-weight: 1000;
+}
 
+label {
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3),
+    1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 /* Navigation */
@@ -113,7 +170,6 @@ a:hover{
   padding: 3px;
   border-radius: 0;
   margin: 5px;
-  
 }
 
 #icons li {
@@ -124,10 +180,11 @@ a:hover{
   position: fixed;
   top: 1vw;
   right: 1vw;
+  z-index: 10;
 }
 
 #icons img {
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 #icons img:hover {
   transform: scale(1.3);
@@ -139,7 +196,6 @@ a:hover{
 }
 
 @media only screen and (max-width: 1300px) {
-
   #icons img {
     display: none;
   }
@@ -149,13 +205,13 @@ a:hover{
     justify-content: center;
   }
 
-  .footer-icons img{
+  .footer-icons img {
     margin: 5px 10px;
     width: 2em;
   }
 
   .footer-icons img {
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
   }
   .footer-icons img:hover {
     transform: scale(1.3);
@@ -165,16 +221,13 @@ a:hover{
 /* Intro section */
 
 .jumbotron {
-  background-color: rgba(0, 0, 0, 0.495) !important;
+  /* background-color: rgba(0, 0, 0, 0.495) !important; */
   width: 100%;
   display: flex !important;
   box-sizing: border-box;
 
   padding-inline: 20px;
 }
-
-
-
 
 .mePhotoContainer {
   /* display: flex; */
@@ -196,15 +249,13 @@ a:hover{
 }
 
 @media only screen and (max-width: 1100px) {
-  #mePhoto{
+  #mePhoto {
     transform: rotate(-180deg);
-
   }
 
   .mePhotoContainer {
     bottom: 24px;
   }
-
 }
 
 @media only screen and (max-width: 990px) {
@@ -221,13 +272,16 @@ a:hover{
 
 /* My projects section */
 
-
 .sectionTitle {
   font-size: 4em;
-  font-family: 'Raleway', sans-serif;
-  color: rgb(223, 223, 223);
+  font-family: "Chibolddemo", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
   margin-block: 1rem 0;
   text-align: center;
+  /* 3D text effect using multiple text shadows */
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2),
+    /* subtle inner shadow */ 2px 2px 0px rgba(0, 0, 0, 0.2),
+    3px 3px 0px rgba(0, 0, 0, 0.2), 4px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
@@ -235,7 +289,7 @@ a:hover{
   margin: 0.7rem 0;
 }
 
-.ci{
+.ci {
   width: 100%;
   padding: 0;
   /* max-height: 250px; */
@@ -245,13 +299,13 @@ a:hover{
 }
 
 .card {
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   padding: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: rgba(0, 0, 0, 0.495) !important;
+  background-color: rgba(255, 255, 255, 0.319) !important;
   color: rgb(255, 255, 255);
   border: 0 !important;
 }
@@ -260,16 +314,14 @@ a:hover{
   transform: scale(1.02);
 }
 
-
 @media only screen and (max-width: 768px) {
-  .ci{
+  .ci {
     background-color: rgba(255, 255, 255, 0);
   }
 }
 
-
 .card {
-  background-color: rgba(0, 0, 0, 0.495) !important;
+  /* background-color: rgba(0, 0, 0, 0.495) !important; */
   color: rgb(255, 255, 255);
   border: 0 !important;
 }
@@ -285,7 +337,6 @@ a:hover{
   }
 } */
 @media only screen and (min-width: 784px) {
-
   /* .card-img img {
     width: 100%;
     border: 0;
@@ -300,10 +351,8 @@ a:hover{
     margin: 0;
   } */
 
-
-
   .card-footer {
-    margin-top: auto;  /* Pushes footer to the bottom */
+    margin-top: auto; /* Pushes footer to the bottom */
     padding: 10px;
     text-align: center;
   }
@@ -317,23 +366,19 @@ a:hover{
   padding: 0 20px;
   margin-top: 0.5em;
   margin-bottom: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
 }
 
-p.card-text  {
+p.card-text {
   margin-top: 0;
 }
 
-h5.card-text  {
+h5.card-text {
   font-size: 1.2rem;
 }
 
-
-
-
 /* About me */
-
 
 .float {
   display: block;
@@ -341,10 +386,7 @@ h5.card-text  {
   width: 40px;
 }
 
-
-
-
-.projectContainer{
+.projectContainer {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
@@ -375,22 +417,22 @@ h5.card-text  {
   }
 }
 
-  /* Animate */
+/* Animate */
 
-  :root {
-    --animate-duration: 2s;
-  }
+:root {
+  --animate-duration: 2s;
+}
 
-  .text-center{
-    align-self: center;
-  }
+.text-center {
+  align-self: center;
+}
 
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 0;
-  }
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0;
+}
 
 .about {
   display: flex;
@@ -399,11 +441,11 @@ h5.card-text  {
   align-items: center;
 }
 
-.aboutText{
+.aboutText {
   padding: 2rem;
 }
 
-.cardAbout{
+.cardAbout {
   display: flex;
   justify-content: center;
 }
@@ -419,7 +461,7 @@ h5.card-text  {
   align-items: center;
 }
 
-.cardForm{
+.cardForm {
   display: flex;
   /* justify-content: center;
   align-items: center;  */
@@ -427,20 +469,19 @@ h5.card-text  {
   padding: 2rem;
 }
 
-.formBody{
+.formBody {
   display: flex;
   width: 100%;
   /* align-items: flex-start; */
   flex-direction: column;
   padding: 0;
-
 }
 
 .formBody > * {
   margin: 10px;
 }
 
-.formElement{
+.formElement {
   text-align: center;
 }
 
@@ -450,8 +491,8 @@ h5.card-text  {
 }
 
 .feedback {
-  color: rgb(255, 0, 0) ;
-} 
+  color: rgb(255, 0, 0);
+}
 
 .text-sm {
   font-size: 0.7rem;
@@ -464,12 +505,12 @@ h5.card-text  {
 }
 
 .formButton {
-  background-color: #555555; /* Light grey background */
+  background-color: #d9d9d923 !important; /* Light grey background */
   border: 1px solid #dadada;
   border-radius: 8px;
   box-shadow: rgba(90, 90, 90, 0.5) 0 2px 5px 0;
   box-sizing: border-box;
-  color: #dadada; /* Dark grey text color */
+  color: #ffffff !important; /* Dark grey text color */
   cursor: pointer;
   display: inline-block;
   font-family: "Amazon Ember", sans-serif;
@@ -488,19 +529,20 @@ h5.card-text  {
 }
 
 .formButton:hover {
-  background-color: #e6e6e6; /* Lighter grey on hover */
-  color: #717171; /* Dark grey text color */
+  background-color: #ffffff5f !important; /* Lighter grey on hover */
+  color: #4b4949cb !important; /* Dark grey text color */
 }
 
 .formButton:active {
-  border-color: #595959; /* Dark grey border on focus */
+  border-color: #59595939; /* Dark grey border on focus */
   box-shadow: rgba(92, 92, 92, 0.5) 0 2px 5px 0;
   outline: 0;
   transform: scale(0.95);
 }
 
-input, textarea {
-  background-color: #333;
+input,
+textarea {
+  background-color: #33333327 !important;
   color: #fff; /* Text color */
   border: 1px solid #555; /* Border color */
   padding: 10px; /* Adjust padding as needed */
@@ -515,15 +557,16 @@ textarea:focus {
 }
 
 /* Style placeholder text for both input and textarea */
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #ccc; /* Placeholder text color */
 }
 
 /* Apply hover effect to both input and textarea */
-input:hover, textarea:hover {
-  border-color: #777; /* Adjust hover border color as needed */
+input:hover,
+textarea:hover {
+  border-color: #7777775d; /* Adjust hover border color as needed */
 }
-
 
 label {
   display: block; /* Make labels block-level elements */

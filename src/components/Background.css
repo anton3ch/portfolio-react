@@ -1,0 +1,44 @@
+/* ========================= */
+/* Animated Multicolor Background with Gradient Transitions, Clockwise Spin, and Full Coverage */
+/* ========================= */
+.animated-background {
+  position: fixed;
+  /* Center the background element */
+  top: 50%;
+  left: 50%;
+  /* Increase the size beyond the viewport so it covers during rotation */
+  width: 150rem;
+  height: 150rem;
+  transform: translate(-50%, -50%);
+
+  filter: blur(8px); /* Frosted effect */
+  z-index: -1; /* Place behind all other content */
+
+  background-size: 200% 200%;
+  /* Combine two animations: one for the gradient transition, one for spinning */
+  animation: gradientAnimation 30s ease infinite,
+    spinAnimation 60s linear infinite;
+}
+
+/* Keyframes for smooth gradient transition */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Keyframes for clockwise spin */
+@keyframes spinAnimation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

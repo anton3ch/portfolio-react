@@ -113,7 +113,7 @@ const mainProjectList = [
     imgAlt: "Note Me App screenshot",
     description:
       "A React Native application designed for efficient note-taking. It allows users to create, organize, and manage their notes with ease. The app features a clean and intuitive interface, providing functionalities such as adding new notes, editing existing ones, and categorizing notes for better organization.",
-    gitRepo: "https://github.com/anton3ch/Note-Me-App",
+    gitRepo: "",
     technologies: [
       {
         name: "React Native",
@@ -133,7 +133,6 @@ const mainProjectList = [
       },
     ],
   },
-  ,
   // {
   //   deployedLink: "https://anton3ch.github.io/galactic-age/",
   //   projectName: "Interplanetary Age",
@@ -161,29 +160,29 @@ const mainProjectList = [
   //     },
   //   ],
   // },
-  {
-    deployedLink: "https://anton3ch.github.io/neighbor/",
-    projectName: "Neighborhood",
-    img: neighborhoodImg,
-    imgAlt: "Neighborhood app screenshot",
-    description:
-      "A robust neighborhood application that takes a user input and generates a range of numbers from 0 to the provided value with seamless substitutions. Implemented Jest unit testing for reliability and bug-free user experience.",
-    gitRepo: "",
-    technologies: [
-      {
-        name: "HTML",
-        link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
-      },
-      {
-        name: "CSS",
-        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      },
-      {
-        name: "JavaScript",
-        link: "https://www.javascript.com",
-      },
-    ],
-  },
+  // {
+  //   deployedLink: "https://anton3ch.github.io/neighbor/",
+  //   projectName: "Neighborhood",
+  //   img: neighborhoodImg,
+  //   imgAlt: "Neighborhood app screenshot",
+  //   description:
+  //     "A robust neighborhood application that takes a user input and generates a range of numbers from 0 to the provided value with seamless substitutions. Implemented Jest unit testing for reliability and bug-free user experience.",
+  //   gitRepo: "",
+  //   technologies: [
+  //     {
+  //       name: "HTML",
+  //       link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+  //     },
+  //     {
+  //       name: "CSS",
+  //       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  //     },
+  //     {
+  //       name: "JavaScript",
+  //       link: "https://www.javascript.com",
+  //     },
+  //   ],
+  // },
   // {
   //   deployedLink: "https://anton3ch.github.io/language-suggester/",
   //   projectName: "Language Suggester",
@@ -207,64 +206,65 @@ const mainProjectList = [
   //     },
   //   ],
   // },
-  {
-    deployedLink: "https://anton3ch.github.io/currency-exchange",
-    projectName: "Currency Exchange",
-    img: currencyAgeImg,
-    imgAlt: "Currency Exchanger app screenshot",
-    description:
-      "Currency Exchanger queries ExchangeRate-API to convert currency between all available currency types. A user can type in an amount and then choose which currency it should be converted from and to.",
-    gitRepo: "https://github.com/anton3ch/currency-exchange",
-    technologies: [
-      {
-        name: "HTML",
-        link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
-      },
-      {
-        name: "CSS",
-        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      },
-      {
-        name: "JavaScript",
-        link: "https://www.javascript.com",
-      },
-      {
-        name: "Webpack",
-        link: "https://webpack.js.org",
-      },
-      {
-        name: "ExchangeRate-API",
-        link: "https://www.exchangerate-api.com",
-      },
-    ],
-  },
-  {
-    deployedLink: "https://anton3ch.github.io/slayer-rpg/",
-    projectName: "The Bug Slayer",
-    img: rpgAgeImg,
-    imgAlt: "The Bug Slayer app screenshot",
-    description:
-      "Point-and-click game in which the player must use nothing but their mouse to find clues in order to complete the quest.",
-    gitRepo: "https://github.com/anton3ch/slayer-rpg/",
-    technologies: [
-      {
-        name: "HTML",
-        link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
-      },
-      {
-        name: "CSS",
-        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      },
-      {
-        name: "JavaScript",
-        link: "https://www.javascript.com",
-      },
-      {
-        name: "Webpack",
-        link: "https://webpack.js.org",
-      },
-    ],
-  },
+  // {
+  //   deployedLink: "https://anton3ch.github.io/currency-exchange",
+  //   projectName: "Currency Exchange",
+  //   img: currencyAgeImg,
+  //   imgAlt: "Currency Exchanger app screenshot",
+  //   description:
+  //     "Currency Exchanger queries ExchangeRate-API to convert currency between all available currency types. A user can type in an amount and then choose which currency it should be converted from and to.",
+  //   gitRepo: "https://github.com/anton3ch/currency-exchange",
+  //   technologies: [
+  //     {
+  //       name: "HTML",
+  //       link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+  //     },
+  //     {
+  //       name: "CSS",
+  //       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  //     },
+  //     {
+  //       name: "JavaScript",
+  //       link: "https://www.javascript.com",
+  //     },
+  //     {
+  //       name: "Webpack",
+  //       link: "https://webpack.js.org",
+  //     },
+  //     {
+  //       name: "ExchangeRate-API",
+  //       link: "https://www.exchangerate-api.com",
+  //     },
+  //   ],
+  // },
+  // {
+  //   deployedLink: "https://anton3ch.github.io/slayer-rpg/",
+  //   projectName: "The Bug Slayer",
+  //   img: rpgAgeImg,
+  //   imgAlt: "The Bug Slayer app screenshot",
+  //   description:
+  //     "Point-and-click game in which the player must use nothing but their mouse to find clues in order to complete the quest.",
+  //   gitRepo: "https://github.com/anton3ch/slayer-rpg/",
+  //   technologies: [
+  //     {
+  //       name: "HTML",
+  //       link: "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+  //     },
+  //     {
+  //       name: "CSS",
+  //       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  //     },
+  //     {
+  //       name: "JavaScript",
+  //       link: "https://www.javascript.com",
+  //     },
+  //     {
+  //       name: "Webpack",
+  //       link: "https://webpack.js.org",
+  //     },
+  //   ],
+  // },
+  ,
 ];
 
 // const newProjectList = [

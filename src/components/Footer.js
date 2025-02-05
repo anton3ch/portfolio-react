@@ -5,6 +5,7 @@ import instagram from "./../img/instagram.png";
 import linkedin from "./../img/linkedin.png";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <React.Fragment>
       <div className="footer-icons">
@@ -15,6 +16,7 @@ export default function Footer() {
         <a href="https://github.com/anton3ch" rel="noreferrer" target="_blank">
           <img src={github} alt="GitHub Icon" />
         </a>
+
         {/* 
         <a
           href="https://www.instagram.com/antony.chase/"
@@ -33,8 +35,15 @@ export default function Footer() {
         </a>
       </div>
       <div className="footer-text">
-        {" "}
-        © 2024 Copyright: <span className="text-reset fw-bold">Anton Ch</span>
+        © {currentYear} Copyright:{" "}
+        <a
+          href="https://www.linkedin.com/in/anton3ch/"
+          rel="noreferrer"
+          target="_blank"
+          className="text-reset fw-bold"
+        >
+          Anton Ch
+        </a>
       </div>
     </React.Fragment>
   );

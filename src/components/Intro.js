@@ -1,5 +1,6 @@
 import React from "react";
-import "./Styles/introStyles.css"; // Make sure to import the CSS file
+import "./Styles/introStyles.css"; // Your existing intro styles
+import FrothyBackground from "./FrothyBackground";
 
 const skills = [
   "JavaScript",
@@ -54,23 +55,32 @@ function getAnimationDuration() {
 
 function Intro() {
   return (
-    <div className="jumbotron p-2 ps-0 pb-0 intro mx-3" id="intro">
-      <div className="innerIntro">
-        <h1 className="introHey">Hey</h1>
-        <div className="intro-name">
-          <h2 className="intro-name">I'm</h2>
-          <h2 className="intro-name">
-            <a
-              href="https://www.linkedin.com/in/anton3ch/"
-              target="_blank"
-              id="myName"
-              rel="noreferrer"
-            >
-              Anton
-            </a>
-          </h2>
+    <div className="outerBox">
+      <div
+        className="jumbotron m-8  ps-0 pb-0 intro mx-3"
+        id="intro"
+        // style={{ position: "relative", overflow: "hidden" }}
+      >
+        {/* Insert the frothy floating rectangle as a background overlay */}
+        <FrothyBackground />
+
+        <div className="innerIntro">
+          <h1 className="introHey">Hey</h1>
+          <div className="intro-name">
+            <h2 className="intro-name">I'm</h2>
+            <h2 className="intro-name">
+              <a
+                href="https://www.linkedin.com/in/anton3ch/"
+                target="_blank"
+                id="myName"
+                rel="noreferrer"
+              >
+                Anton
+              </a>
+            </h2>
+          </div>
+          <h2 id="intro2">Full-Stack Software Engineer</h2>
         </div>
-        <h2 id="intro2">Full-Stack Software Engineer</h2>
       </div>
       <div className="bubbles">
         {skills.map((skill, index) => (
@@ -88,6 +98,7 @@ function Intro() {
               }s`,
             }}
           >
+            <div className="bubble-bg">{skill}</div>
             {skill}
           </div>
         ))}
