@@ -95,16 +95,14 @@ function Intro() {
           <h1 className="introHey ">Hey</h1>
           <div className="intro-name">
             <h2 className="intro-name">I'm</h2>
-            <h2 className="intro-name">
-              <a
-                href="https://www.linkedin.com/in/anton3ch/"
-                target="_blank"
-                id="myName"
-                rel="noreferrer"
-              >
-                Anton
-              </a>
-            </h2>
+            <a
+              href="https://www.linkedin.com/in/anton3ch/"
+              target="_blank"
+              id="myName"
+              rel="noreferrer"
+            >
+              <h2 className="intro-name">Anton</h2>
+            </a>
           </div>
           <h2 id="intro2" className="depth">
             Full-Stack Software Engineer

@@ -71,19 +71,21 @@
 }
 
 #myName {
-  background: -webkit-linear-gradient(rgb(150, 101, 241), rgb(228, 146, 255));
+  /* background: -webkit-linear-gradient(rgb(150, 101, 241), rgb(228, 146, 255)); */
   text-shadow: -4px -2px rgb(255, 255, 255);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgb(255, 255, 255);
+  /* -webkit-text-fill-color: transparent; */
   font-weight: 1000;
   text-decoration: none;
   margin-left: 1rem;
 }
 
 #myName:hover {
-  background: -webkit-linear-gradient(rgb(255, 29, 29), rgb(208, 69, 255));
+  /* background: -webkit-linear-gradient(rgb(255, 29, 29), rgb(208, 69, 255)); */
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  /* -webkit-text-fill-color: transparent; */
   font-weight: 1000;
 }
 
