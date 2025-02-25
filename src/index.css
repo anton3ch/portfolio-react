@@ -267,7 +267,8 @@ a:hover {
 
 .sectionTitle {
   font-size: 4em;
-  font-family: "Chibolddemo", sans-serif;
+
+  font-family: "MekkoOutline", sans-serif;
   color: rgba(255, 255, 255, 0.9);
   margin-block: 1rem 0;
   text-align: center;

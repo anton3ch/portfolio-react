@@ -92,7 +92,7 @@ function Intro() {
         <FrothyBackground />
 
         <div className="innerIntro">
-          <h1 className="introHey">Hey</h1>
+          <h1 className="introHey ">Hey</h1>
           <div className="intro-name">
             <h2 className="intro-name">I'm</h2>
             <h2 className="intro-name">
@@ -106,7 +106,9 @@ function Intro() {
               </a>
             </h2>
           </div>
-          <h2 id="intro2">Full-Stack Software Engineer</h2>
+          <h2 id="intro2" className="depth">
+            Full-Stack Software Engineer
+          </h2>
         </div>
       </Container>
       <div
