@@ -69,16 +69,20 @@ function getAnimationDuration() {
 
 function Intro() {
   const outerBoxRef = useRef(null);
-  const [outerBoxHeight, setOuterBoxHeight] = useState(0);
+  const [outerBoxHeight, setOuterBoxHeight] = useState("30rem");
 
-  useEffect(() => {
-    if (outerBoxRef.current) {
-      setOuterBoxHeight(outerBoxRef.current.clientHeight);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (outerBoxRef.current) {
+  //     setOuterBoxHeight(outerBoxRef.current.clientHeight);
+  //   }
+  // }, []);
 
   return (
-    <div className="outerBox" ref={outerBoxRef}>
+    <div
+      className="outerBox"
+      ref={outerBoxRef}
+      style={{ height: outerBoxHeight }}
+    >
       <div
         className="outerBoxLeftBlur"
         style={{ height: outerBoxHeight }}
@@ -86,6 +90,7 @@ function Intro() {
       <Container
         className="jumbotron intro"
         id="intro"
+
         // style={{ position: "relative", overflow: "hidden" }}
       >
         {/* Insert the frothy floating rectangle as a background overlay */}
@@ -93,9 +98,9 @@ function Intro() {
 
         <div className="innerIntro">
           <h1 className="introHey ">Hey</h1>
-          <div className="intro-name">
-            <h2 className="intro-name">I'm Anton</h2>
-            {/* <a
+          {/* <div className="intro-name"> */}
+          <h2 className="intro-name">I'm Anton</h2>
+          {/* <a
               href="https://www.linkedin.com/in/anton3ch/"
               target="_blank"
               id="myName"
@@ -103,7 +108,7 @@ function Intro() {
             >
               <h2 className="intro-name">Anton</h2>
             </a> */}
-          </div>
+          {/* </div> */}
           <h2 id="intro2" className="depth">
             Full-Stack Software Engineer
           </h2>
