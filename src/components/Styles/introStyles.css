@@ -1,14 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Parisienne&family=Pacifico&family=Satisfy&family=Alex+Brush&family=Allura&family=Yellowtail&family=Rouge+Script&family=Amatic+SC&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-/* Flickering animation */
-/* .outerBox {
-  width: 100%;
-  position: relative;
-  padding: 2vh 3vh 0 3vh;
-  display: flex;
-  justify-content: center;
-} */
+
 .intro {
   display: block;
   /* justify-content: center; */
@@ -33,153 +26,20 @@
   /* justify-content: flex-start; */
 }
 
-.introHey {
-  margin-block: 1rem;
-}
-
-.intro-name {
-  margin-block: 1rem;
-  display: flex;
-}
-
-#intro h1 {
-  font-size: 3rem !important;
+.intro-text {
+  font-size: clamp(2.9rem, 5vw, 3.5rem) !important;
   font-family: "Inter", sans-serif;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2),
     /* subtle inner shadow */ 2px 2px 0px rgba(0, 0, 0, 0.2),
     3px 3px 0px rgba(0, 0, 0, 0.2), 4px 4px 0px rgba(0, 0, 0, 0.2);
-}
-
-#intro h2 {
-  font-size: 2.9rem !important;
-  font-family: "Inter", sans-serif;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2),
-    /* subtle inner shadow */ 2px 2px 0px rgba(0, 0, 0, 0.2),
-    3px 3px 0px rgba(0, 0, 0, 0.2), 4px 4px 0px rgba(0, 0, 0, 0.2);
-}
-
-#intro2 {
-  /* display: flex;
-  flex-wrap: wrap;
-  text-wrap: wrap;
-  width: auto; */
-  /* max-width: fit-content;
-  min-width: min-content; */
-  font-size: 2.9rem !important;
   margin-block: 1rem;
-  /* padding-bottom: 1rem; */
-}
-
-#myName {
-  /* background: -webkit-linear-gradient(rgb(150, 101, 241), rgb(228, 146, 255)); */
-  text-shadow: -4px -2px rgb(255, 255, 255);
-  -webkit-background-clip: text;
-  color: rgb(255, 255, 255);
-  /* -webkit-text-fill-color: transparent; */
-  font-weight: 1000;
-  text-decoration: none;
-  margin-left: 1rem;
-}
-
-#myName:hover {
-  /* background: -webkit-linear-gradient(rgb(255, 29, 29), rgb(208, 69, 255)); */
-  -webkit-background-clip: text;
-
-  /* -webkit-text-fill-color: transparent; */
-  font-weight: 1000;
-}
-
-/* Flickering animation keyframes */
-@keyframes flash-txt {
-  0% {
-    text-shadow: 2px 2px 18px rgb(0, 255, 81);
-    /* color: rgb(0, 0, 0); */
-  }
-  18% {
-    text-shadow: 2px 2px 18px rgb(4, 107, 252);
-    color: white;
-  }
-  20% {
-    text-shadow: none;
-    color: white;
-  }
-  22% {
-    text-shadow: 2px 2px 18px rgb(252, 4, 231);
-    /* color: rgb(0, 0, 0); */
-  }
-  24% {
-    text-shadow: none;
-    color: white;
-  }
-  25% {
-    text-shadow: 2px 2px 18px rgb(4, 252, 83);
-    color: white;
-  }
-  53% {
-    text-shadow: 2px 2px 18px rgb(4, 107, 252);
-    color: white;
-  }
-  55% {
-    text-shadow: none;
-    color: white;
-  }
-  57% {
-    text-shadow: 2px 2px 8px rgb(252, 4, 231);
-    /* color: rgb(0, 0, 0); */
-  }
-  100% {
-    text-shadow: 2px 2px 8px rgb(4, 107, 252);
-    color: white;
-  }
-}
-
-@-webkit-keyframes flash-txt {
-  0% {
-    text-shadow: 2px 2px 18px rgb(4, 252, 83);
-    color: white;
-  }
-  18% {
-    text-shadow: 2px 2px 18px rgb(4, 107, 252);
-    color: white;
-  }
-  20% {
-    text-shadow: none;
-    color: white;
-  }
-  22% {
-    text-shadow: 2px 2px 18px rgb(252, 4, 231);
-    color: white;
-  }
-  24% {
-    text-shadow: none;
-    color: white;
-  }
-  25% {
-    text-shadow: 2px 2px 18px rgb(4, 252, 83);
-    color: white;
-  }
-  53% {
-    text-shadow: 2px 2px 18px rgb(4, 107, 252);
-    color: white;
-  }
-  55% {
-    text-shadow: none;
-    color: white;
-  }
-  57% {
-    text-shadow: 2px 2px 8px rgb(252, 4, 231);
-    color: white;
-  }
-  100% {
-    text-shadow: 2px 2px 8px rgb(4, 107, 252);
-    color: white;
-  }
 }
 
 /* Main container styles */
 .jumbotron {
   position: relative; /* So that absolutely positioned children are relative to this */
   overflow-y: visible;
+  justify-content: center !important;
   background: transparent; /* Transparent background so the frothy layer shows */
 }
 .outerBox {

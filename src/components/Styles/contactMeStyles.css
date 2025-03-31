@@ -32,6 +32,9 @@
   left: -25px; /* Position checkmark to the left of the text */
 }
 
+.formElement {
+  margin: 5px !important;
+}
 .formButton {
   background-color: #333; /* Light grey background */
   border: 1px solid #dadada;
