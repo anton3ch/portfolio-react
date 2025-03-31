@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 const aboutMeText =
   `I’m an inquisitive Full Stack Software Engineer passionate about blending creativity, innovation, and cutting-edge technology to create impactful solutions. My diverse background fuels my curiosity, enabling me to continuously learn and approach problems strategically, both independently and collaboratively.
 
-Driven by a fascination with Large Language Models (LLMs), I leverage AI-driven tools to streamline workflows, enhance productivity, and automate routine tasks, making development processes more efficient. I’m also passionate about augmented reality and its potential to transform user interactions, continuously exploring new ways to integrate immersive experiences into my projects.
+Driven by a fascination with Large Language Models (LLMs), I leverage AI-driven tools to streamline workflows, enhance productivity, and automate routine tasks, making development processes more efficient. I’m also passionate about augmented reality and its potential to transform user interactions.
 
 As a freelance Software Engineer, I’ve delivered over 15 custom software solutions, consistently surpassing client expectations with a 100% satisfaction rate. My use of advanced technologies and efficient coding practices has reduced development times by 25%, improving overall software performance. My strong organizational skills ensure timely delivery, earning repeat business and top client ratings.
 
