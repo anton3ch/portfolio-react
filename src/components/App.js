@@ -10,7 +10,6 @@ import ContactMeSection from "./ContactMeSection";
 import { Helmet } from "react-helmet";
 import { ThemeProvider, CssBaseline, Container } from "@mui/material";
 import Background from "./Background"; // Import our background component
-import PhotoLibrary from "./PhotoLibrary.js";
 
 function App() {
   return (
@@ -28,7 +27,7 @@ function App() {
           <Intro />
 
           <Container>
-            {/* <PhotoLibrary /> */}
+
             <MainProject />
             <ProjectList />
             <AboutMe />
