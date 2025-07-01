@@ -1,21 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ScrollReveal from "scrollreveal";
 
 function Project(props) {
   return (
     <div className="col-lg-4 project">
       <div className="card card-s">
-        <a href={props.deployedLink} target="_blank" rel="noreferrer">
-          {" "}
-          <img
-            className="ci"
-            src={props.img}
-            // onMouseOver={(e) => (e.currentTarget.src = props.imgGit)}
-            // onMouseOut={(e) => (e.currentTarget.src = props.img)}
-            alt={props.imgAlt}
-          />
-        </a>
+        <img
+          className="ci"
+          src={props.img}
+          alt={props.imgAlt}
+        />
         <div className="card-body">
           <h3 className="card-title text-center">
             <a href={props.deployedLink} target="_blank" rel="noreferrer">
@@ -25,17 +19,17 @@ function Project(props) {
           {/* <h5 className="card-text">Description:</h5> */}
           <p className="card-text">{props.description}</p>
           <h5 className="card-text">Technologies Used:</h5>
-          <ul className="card-text techList">
+          <div className="card-text techList">
             {props.technologies.map((technology, i) => {
               return (
-                <li key={i}>
-                  <a href={technology.link} target="_blank" rel="noreferrer">
+
+                  <a href={technology.link} target="_blank" rel="noreferrer" className="mainProjectTech">
                     {technology.name}
                   </a>
-                </li>
+
               );
             })}
-          </ul>
+          </div>
           <p className="card-footer text-center">
             {props.gitRepo && (
               <a href={props.gitRepo} target="_blank" rel="noreferrer">
@@ -45,19 +39,6 @@ function Project(props) {
           </p>
         </div>
       </div>
-      {ScrollReveal().reveal(".project", {
-        delay: 200,
-        distance: "50px",
-        duration: 600,
-        useDelay: "once",
-        reset: true,
-      })}
-
-      {/* {ScrollReveal().reveal(".card-body", {
-        delay: 250,
-        interval: 0,
-        reset: true,
-      })} */}
     </div>
   );
 }

@@ -3,12 +3,14 @@ import React from "react";
 import SidePanel from "./SidePanel.js";
 import AboutMe from "./AboutMe.js";
 import ProjectList from "./ProjectList.js";
+import MainProject from "./MainProject.js";
 import Intro from "./Intro.js";
 import Footer from "./Footer";
 import ContactMeSection from "./ContactMeSection";
 import { Helmet } from "react-helmet";
 import { ThemeProvider, CssBaseline, Container } from "@mui/material";
 import Background from "./Background"; // Import our background component
+import PhotoLibrary from "./PhotoLibrary.js";
 
 function App() {
   return (
@@ -24,7 +26,10 @@ function App() {
             </Helmet> */}
           <title>Anton Ch</title>
           <Intro />
+
           <Container>
+            {/* <PhotoLibrary /> */}
+            <MainProject />
             <ProjectList />
             <AboutMe />
             <ContactMeSection />
