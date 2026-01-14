@@ -99,7 +99,7 @@ function Intro() {
         <div className="innerIntro">
           <h2 className="intro-text ">Hey</h2>
           {/* <div className="intro-name"> */}
-          <h2 className="intro-text">I'm Anton</h2>
+          <h2 className="intro-text">I'm Antony</h2>
           {/* <a
               href="https://www.linkedin.com/in/anton3ch/"
               target="_blank"

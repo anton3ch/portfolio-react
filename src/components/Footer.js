@@ -80,7 +80,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/anton3ch/"
+          href="https://www.linkedin.com/in/antonyporter/"
           rel="noreferrer"
           target="_blank"
         >
@@ -123,7 +123,7 @@ export default function Footer() {
       <div className="footer-text">
         © {currentYear} Copyright:{" "}
         <a
-          href="https://www.linkedin.com/in/anton3ch/"
+          href="https://www.linkedin.com/in/antonyporter/"
           rel="noreferrer"
           target="_blank"
           className="text-reset fw-bold"

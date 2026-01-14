@@ -23,7 +23,7 @@ function App() {
           {/* <Helmet>
               <title>Anton Ch</title>
             </Helmet> */}
-          <title>Anton Ch</title>
+          <title>Antony Porter</title>
           <Intro />
 
           <Container>

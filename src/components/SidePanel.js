@@ -85,7 +85,7 @@ function SidePanel() {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/anton3ch/"
+              href="https://www.linkedin.com/in/antonyporter/"
               rel="noreferrer"
               target="_blank"
             >
