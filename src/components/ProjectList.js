@@ -18,6 +18,8 @@ import taskWaveImg from "./../img/TaskWave.png";
 
 import quackWashImg from "./../img/quackwash.webp";
 
+import casaFiestaImg from "./../img/casafiesta.webp";
+
 function ProjectList() {
   return (
     <React.Fragment>
@@ -44,6 +46,42 @@ function ProjectList() {
 }
 
 const mainProjectList = [
+  {
+    deployedLink: "https://casa-fiesta-restaurant.vercel.app/",
+    projectName: "Casa Fiesta Restaurant",
+    img: casaFiestaImg,
+    imgAlt: "Casa Fiesta Restaurant website screenshot",
+    description:
+      "A modern, responsive restaurant website for Casa Fiesta, featuring authentic Mexican cuisine. Built with Next.js, TypeScript, and Tailwind CSS, the site includes smooth animations with Framer Motion, dark/light theme toggle, interactive gallery, team showcase, menu display, and contact forms with map integration. The design emphasizes warm Mexican aesthetics with chili pepper color schemes and professional typography.",
+    gitRepo: "https://github.com/anton3ch/casa-fiesta-restaurant",
+    technologies: [
+      {
+        name: "Next.js",
+        link: "https://nextjs.org",
+      },
+      {
+        name: "TypeScript",
+        link: "https://www.typescriptlang.org",
+      },
+      {
+        name: "Tailwind CSS",
+        link: "https://tailwindcss.com",
+      },
+      {
+        name: "Framer Motion",
+        link: "https://www.framer.com/motion/",
+      },
+      {
+        name: "React",
+        link: "https://reactjs.org",
+      },
+      {
+        name: "Google Maps API",
+        link: "https://developers.google.com/maps",
+      },
+
+    ],
+  },
   {
     deployedLink: "",
     projectName: "AI TaskWave",

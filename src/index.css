@@ -436,7 +436,8 @@ h5.card-text {
 }
 
 .projectList {
-  display: flex;
+  display: grid;
+  justify-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 1rem;
@@ -446,6 +447,12 @@ h5.card-text {
   display: flex;
   flex: 1 1 30%; /* Allows flexibility in width and ensures equal height */
   min-width: 360px;
+}
+
+@media only screen and (min-width: 784px) {
+  .projectList {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (min-width: 784px) and (max-width: 1159px) {
