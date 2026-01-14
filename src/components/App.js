@@ -21,7 +21,7 @@ function App() {
           <CssBaseline />
           <Background />
           {/* <Helmet>
-              <title>Anton Ch</title>
+              <title>Antony Porter</title>
             </Helmet> */}
           <title>Antony Porter</title>
           <Intro />

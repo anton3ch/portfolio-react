@@ -128,7 +128,7 @@ export default function Footer() {
           target="_blank"
           className="text-reset fw-bold"
         >
-          Anton Ch
+          Antony Porter
         </a>
       </div>
     </React.Fragment>
