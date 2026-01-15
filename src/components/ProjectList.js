@@ -47,13 +47,13 @@ function ProjectList() {
 
 const mainProjectList = [
   {
-    deployedLink: "https://casa-fiesta-restaurant.vercel.app/",
+    deployedLink: "https://casafiesta.netlify.app",
     projectName: "Casa Fiesta Restaurant",
     img: casaFiestaImg,
     imgAlt: "Casa Fiesta Restaurant website screenshot",
     description:
       "A modern, responsive restaurant website for Casa Fiesta, featuring authentic Mexican cuisine. Built with Next.js, TypeScript, and Tailwind CSS, the site includes smooth animations with Framer Motion, dark/light theme toggle, interactive gallery, team showcase, menu display, and contact forms with map integration. The design emphasizes warm Mexican aesthetics with chili pepper color schemes and professional typography.",
-    gitRepo: "https://github.com/anton3ch/casa-fiesta-restaurant",
+    gitRepo: "",
     technologies: [
       {
         name: "Next.js",
