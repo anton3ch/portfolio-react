@@ -10,7 +10,7 @@ function SidePanel() {
       <div id="icons">
         <ul>
           <li>
-            <a href="mailto:a@anton-ch.com" rel="noreferrer" target="_blank">
+            <a href="mailto:antony.porter.dev@gmail.com" rel="noreferrer" target="_blank">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"

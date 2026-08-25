@@ -20,6 +20,8 @@ import quackWashImg from "./../img/quackwash.webp";
 
 import casaFiestaImg from "./../img/casafiesta.webp";
 
+import apTrackingImg from "./../img/ap-tracking.webp";
+
 function ProjectList() {
   return (
     <React.Fragment>
@@ -46,6 +48,61 @@ function ProjectList() {
 }
 
 const mainProjectList = [
+  {
+    deployedLink: "https://ap-tracking.netlify.app",
+    projectName: "AP Tracking Platform",
+    img: apTrackingImg,
+    imgAlt: "AP Tracking Platform screenshot",
+    description:
+      "A full-stack account and product platform built around production-grade auth: passwordless passkey login (SimpleWebAuthn) alongside Google OAuth, role-based access control with role-aware UI restrictions, and Zod schemas shared across the client and the API. Abuse protection is layered: per-IP and per-account rate limiting on Upstash Redis, VPN-friendly account creation, and per-user quotas with an admin bypass. SWR drives client-side caching, request dedup, and server-side sorting, filtering, and pagination. Infinite scroll, skeleton loaders, and adaptive theming sit on top.",
+    gitRepo: "",
+    technologies: [
+      {
+        name: "Next.js",
+        link: "https://nextjs.org",
+      },
+      {
+        name: "React",
+        link: "https://reactjs.org",
+      },
+      {
+        name: "TypeScript",
+        link: "https://www.typescriptlang.org",
+      },
+      {
+        name: "MongoDB",
+        link: "https://www.mongodb.com",
+      },
+      {
+        name: "Tailwind CSS",
+        link: "https://tailwindcss.com",
+      },
+      {
+        name: "WebAuthn",
+        link: "https://webauthn.io",
+      },
+      {
+        name: "SimpleWebAuthn",
+        link: "https://simplewebauthn.dev",
+      },
+      {
+        name: "Zod",
+        link: "https://zod.dev",
+      },
+      {
+        name: "SWR",
+        link: "https://swr.vercel.app",
+      },
+      {
+        name: "Framer Motion",
+        link: "https://www.framer.com/motion/",
+      },
+      {
+        name: "Upstash Redis",
+        link: "https://upstash.com",
+      },
+    ],
+  },
   {
     deployedLink: "https://casafiesta.netlify.app",
     projectName: "Casa Fiesta Restaurant",
